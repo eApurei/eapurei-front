@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Raleway } from 'next/font/google'
 import './globals.css'
+import { Header } from '@/components/header'
 
-const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700', '900'],
+const raleway = Raleway({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   preload: true,
   subsets: ['latin'],
 })
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`antialiased ${roboto.className}`}>{children}</body>
+      <body className={`px-8 antialiased ${raleway.className}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
