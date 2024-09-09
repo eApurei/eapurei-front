@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/header'
+import { Header } from '@/components/organisms/header'
 
 const raleway = Raleway({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`px-8 antialiased ${raleway.className}`}>
+      <body className={`relative px-8 antialiased ${raleway.className}`}>
         <Header />
         {children}
       </body>
