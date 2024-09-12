@@ -1,14 +1,19 @@
 'use client'
 
-import ButtonWhats from '@/components/atoms/buttonWhats'
-import Hero from '@/components/organisms/hero'
+import ChangingTheMeter from '@/components/organisms/ChangingTheMeter'
+import Hero from '@/components/organisms/Hero'
+import Mei from '@/components/organisms/Mei'
+import Plans from '@/components/organisms/Plans'
+import ThinkInCompany from '@/components/organisms/ThinkInCompany'
 
 export default function Home() {
   return (
     <>
       <Hero />
-
-      <ButtonWhats />
+      <Mei />
+      <ThinkInCompany />
+      <ChangingTheMeter />
+      <Plans />
     </>
   )
 }

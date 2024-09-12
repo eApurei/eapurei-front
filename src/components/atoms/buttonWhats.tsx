@@ -1,21 +1,19 @@
-import { Triangle, WhatsappLogo } from '@phosphor-icons/react'
+import { WhatsappLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
+import { Tooltip } from 'react-tooltip'
 
 export default function ButtonWhats() {
   return (
-    <div className="group absolute bottom-4 right-5 flex flex-col items-end justify-center gap-4 rounded-full bg-white p-1">
-      <span className="relative hidden rounded-md bg-gray-500 p-2 text-sm font-semibold text-white group-hover:inline-block group-hover:duration-500">
-        Entre em contato!
-        <Triangle
-          size={12}
-          weight="fill"
-          className="absolute -bottom-2 right-[0.65rem] rotate-180 text-gray-500"
-        />
-      </span>
+    <div className="group fixed bottom-8 right-5 flex flex-col items-end justify-center gap-4 rounded-full bg-white p-1">
+      <Tooltip id="tooltip" />
       <Link
         href={
           'https://wa.me/5515991901126?text=Ol%C3%A1,%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20contabilidade,%20por%20gentileza.'
         }
+        target="_blank"
+        data-tooltip-id="tooltip"
+        data-tooltip-content="Entre em contato!"
+        data-tooltip-place="top-end"
       >
         <WhatsappLogo
           size={44}

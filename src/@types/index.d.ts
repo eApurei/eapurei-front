@@ -10,4 +10,5 @@ export interface IContentListProps {
 export interface IButtonProps {
   label: string
   linkTo: string
+  style?: string
 }

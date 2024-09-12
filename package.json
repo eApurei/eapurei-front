@@ -15,6 +15,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
+    "react-tooltip": "^5.28.0",
     "sonner": "^1.5.0",
     "zod": "^3.23.8"
   },
@@ -25,6 +26,7 @@
     "@zeustech/eslint-config": "^1.1.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",

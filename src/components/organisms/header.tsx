@@ -1,9 +1,10 @@
 'use client'
 
-import { IMenuItemsProps } from '@/@types'
-import { HandCoins, Users } from '@phosphor-icons/react'
+import { HandCoins, Sun, Users } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { IMenuItemsProps } from '@/@types'
 
 const menuItems: IMenuItemsProps[] = [
   {
@@ -31,7 +32,7 @@ const menuItems: IMenuItemsProps[] = [
 export function Header() {
   return (
     <>
-      <header className="flex items-center justify-between py-3">
+      <header className="flex items-center justify-between px-8 py-3">
         <Link href={'/'} className="duration-300 hover:opacity-80">
           <Image
             alt="eApurei Logo"
@@ -43,7 +44,7 @@ export function Header() {
           />
         </Link>
 
-        <nav>
+        <nav className="flex items-center justify-center gap-6">
           <ul className="flex items-center justify-center gap-4 text-base font-bold text-primary-100">
             {menuItems.map((item, index) => {
               return (
@@ -73,6 +74,13 @@ export function Header() {
             <HandCoins size={20} weight="fill" className="text-white" />
             Abrir empresa
           </Link>
+
+          <button type="submit">
+            <Sun
+              size={20}
+              className="text-primary-100 duration-300 hover:scale-110"
+            />
+          </button>
         </div>
       </header>
     </>
