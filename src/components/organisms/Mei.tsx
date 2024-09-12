@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Button from '../atoms/Button'
+import ButtonComponent from '../atoms/ButtonComponent'
 
 export default function Mei() {
   return (
@@ -26,7 +26,7 @@ export default function Mei() {
           </p>
         </div>
 
-        <Button
+        <ButtonComponent
           label="desenquadrar agora"
           linkTo="https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20realizar%20o%20desenquadramento%20do%20meu%20MEI,%20por%20gentileza."
         />

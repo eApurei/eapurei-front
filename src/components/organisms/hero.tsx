@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { IContentListProps } from '@/@types'
 
-import Button from '../atoms/Button'
+import ButtonComponent from '../atoms/ButtonComponent'
 
 const contentList: IContentListProps[] = [
   {
@@ -48,11 +48,11 @@ export default function Hero() {
         </h4>
 
         <div className="flex items-center justify-center gap-4">
-          <Button
+          <ButtonComponent
             label="converse com um especialista"
             linkTo="https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20conversar%20com%20um%20especialista,%20por%20gentileza."
           />
-          <Button
+          <ButtonComponent
             label="trocar de contador"
             linkTo="https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20trocar%20de%20contador,%20por%20gentileza."
           />

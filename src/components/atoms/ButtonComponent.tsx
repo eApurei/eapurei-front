@@ -2,7 +2,11 @@ import Link from 'next/link'
 
 import { IButtonProps } from '@/@types'
 
-export default function Button({ label, linkTo, style }: IButtonProps) {
+export default function ButtonComponent({
+  label,
+  linkTo,
+  style,
+}: IButtonProps) {
   return (
     <Link
       href={linkTo}
