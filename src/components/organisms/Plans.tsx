@@ -1,8 +1,10 @@
 'use client'
 
+import { Info } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { Tooltip } from 'react-tooltip'
 
 import { roboto } from '@/app/layout'
 
@@ -22,7 +24,7 @@ export default function Plans() {
 
   return (
     <main className="flex w-full flex-col items-center justify-center gap-8 bg-white p-8">
-      <h1 className="text-grey-100 text-4xl font-bold">
+      <h1 className="text-4xl font-bold text-grey-100">
         Confira nossos planos
       </h1>
 
@@ -63,13 +65,13 @@ export default function Plans() {
           >
             <Link
               href={'#'}
-              className="bg-grey-200 hover:border-primary-50 relative flex min-h-[900px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent duration-300 hover:scale-105"
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-grey-200 duration-300 hover:scale-105 hover:border-primary-50"
             >
               <h1 className="px-14 py-4 text-center text-lg font-bold text-white">
                 Pacote Básico
               </h1>
 
-              <div className="bg-grey-900 flex w-full items-center justify-center gap-2 p-8">
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
                 <span className="text-3xl font-bold text-white">
                   {Intl.NumberFormat('pt-BR', {
                     currency: 'BRL',
@@ -79,18 +81,83 @@ export default function Plans() {
                 </span>
               </div>
 
-              <ul className="flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
-                <li>• Abertura da Empresa de forma Gratuita</li>
-                <li>• Contabilidade Completa</li>
-                <li>• Abertura Conta Bancária PJ Gratuita</li>
-                <li>• Certificado Digital Gratuito</li>
+              <ul className="z-50 flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="companyInfo" style={{ width: '90%' }} />
+                  • Abertura da Empresa de forma Gratuita
+                  <Info
+                    size={24}
+                    weight="fill"
+                    data-tooltip-id="companyInfo"
+                    data-tooltip-html="Você paga apenas as taxas do governo e realiza os protocolos físicos.<br /><br />Indicamos o melhor regime tributário e atividades e você recebe a documentação de abertura via E-mail ou Correios dependendo da cidade.<br /><br />A abertura sem sair de casa está disponível para as cidades de Belo Horizonte, Curitiba, Florianópolis e São Paulo."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="accounting" style={{ width: '90%' }} />
+                  • Contabilidade Completa
+                  <Info
+                    size={22}
+                    weight="fill"
+                    data-tooltip-id="accounting"
+                    data-tooltip-html="Todas as obrigações contábeis e legais com Receita Federal, Estadual e Prefeitura: Cálculo e emissão de guia de impostos;<br /><br />Envio de IRPJ, DIPJ, DEFIS;<br /><br />Relatórios contábeis (DRE, Balanço Patrimonial, Balancete etc;<br /><br />Obrigações acessórias (DCTF, SPED, etc..);<br /><br />Documentos assinados por contador especializado."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="account" style={{ width: '90%' }} />
+                  • Abertura Conta Bancária PJ Gratuita
+                  <Info
+                    size={24}
+                    weight="fill"
+                    data-tooltip-id="account"
+                    data-tooltip-html="Sua conta PJ é aberta gratuitamente e sem taxas, após isso é integrada com todos seus processos contábeis e financeiros, sem custos adicionais e sem tarifas.<br /><br />Isso não impede o empresário de utilizar outras contas bancárias."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="certificated" style={{ width: '90%' }} />
+                  • Certificado Digital Gratuito
+                  <Info
+                    size={22}
+                    weight="fill"
+                    data-tooltip-id="certificated"
+                    data-tooltip-html="O Certificado Digital é necessário para a emissão de nota fiscal eletrônica e para acessar os serviços da Receita Federal."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
                 <li>• Atendimento E-mail Ilimitado</li>
                 <li>• Atendimento WhatsApp Ilimitado</li>
                 <li>• Pró-Labore do Sócio (1 Sócio)</li>
                 <li>• Emissão de CND mensalmente</li>
                 <li>• Emissão de Nota Fiscal (1 por mês)</li>
-                <li>• Importação e Conciliação de Extrato Bancário</li>
-                <li>• Emissão do Alvará de Funcionamento</li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="bank" style={{ width: '90%' }} />
+                  • Importação e Conciliação de Extrato Bancário
+                  <Info
+                    size={28}
+                    weight="fill"
+                    data-tooltip-id="bank"
+                    data-tooltip-html="Sistema de Gestão Integrada (Gestão Financeira de Contas a Pagar e Receber + Emissor de Nota Fiscal + Emissão de Faturas/Recibos + Dashboard Fluxo de Caixa) Versão Mobile e Versão Web"
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  • Emissão do Alvará de Funcionamento
+                  <Info
+                    size={24}
+                    weight="fill"
+                    data-tooltip-id="bank"
+                    data-tooltip-html="Sistema de Gestão Integrada (Gestão Financeira de Contas a Pagar e Receber + Emissor de Nota Fiscal + Emissão de Faturas/Recibos + Dashboard Fluxo de Caixa) Versão Mobile e Versão Web"
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
                 <li>• Faturamento Mensal Até 50 mil</li>
               </ul>
 
@@ -115,7 +182,7 @@ export default function Plans() {
 
             <Link
               href={'#'}
-              className="bg-secondary-50 hover:border-primary-50 relative flex min-h-[900px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent duration-300 hover:scale-105"
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-50 duration-300 hover:scale-105 hover:border-primary-50"
             >
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold uppercase text-white">
                 Mais vendido!
@@ -125,7 +192,7 @@ export default function Plans() {
                 Pacote Padrão
               </h1>
 
-              <div className="bg-grey-900 flex w-full items-center justify-center gap-2 p-8">
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
                 <span className="text-3xl font-bold text-white">
                   {Intl.NumberFormat('pt-BR', {
                     currency: 'BRL',
@@ -135,16 +202,25 @@ export default function Plans() {
                 </span>
               </div>
 
-              <ul className="flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
+              <ul className="z-40 flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
                 <li className="text-base font-bold">
                   • Tudo o que inclui no pacote BÁSICO MAIS...
                 </li>
                 <li>• Pró-Labore do Sócio (2 Sócios)</li>
                 <li>• Folha de Pagamento (1 funcionário)</li>
                 <li>• Emissão de Nota Fiscal (2 por mês)</li>
-                <li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="system" style={{ width: '90%' }} />
                   • Sistema de Gestão (Emissor de Nota Fiscal + Gestão
                   Financeira)
+                  <Info
+                    size={38}
+                    weight="fill"
+                    data-tooltip-id="system"
+                    data-tooltip-html="Sistema de Gestão Integrada (Gestão Financeira de Contas a Pagar e Receber + Emissor de Nota Fiscal + Emissão de Faturas/Recibos + Dashboard Fluxo de Caixa) Versão Mobile e Versão Web"
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
                 </li>
                 <li>• Faturamento Mensal Até 80 mil</li>
               </ul>
@@ -170,7 +246,7 @@ export default function Plans() {
 
             <Link
               href={'#'}
-              className="bg-primary-50 hover:border-primary-50 relative flex min-h-[900px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent duration-300 hover:scale-105"
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-primary-50 duration-300 hover:scale-105 hover:border-primary-50"
             >
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
@@ -180,7 +256,7 @@ export default function Plans() {
                 Pacote Plus
               </h1>
 
-              <div className="bg-grey-900 flex w-full items-center justify-center gap-2 p-8">
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
                 <span className="text-3xl font-bold text-white">
                   {Intl.NumberFormat('pt-BR', {
                     currency: 'BRL',
@@ -223,7 +299,7 @@ export default function Plans() {
 
             <Link
               href={'#'}
-              className="bg-secondary-900 hover:border-primary-50 relative flex min-h-[900px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent duration-300 hover:scale-105"
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-900 duration-300 hover:scale-105 hover:border-primary-50"
             >
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
@@ -233,7 +309,7 @@ export default function Plans() {
                 Pacote Expert
               </h1>
 
-              <div className="bg-grey-900 flex w-full items-center justify-center gap-2 p-8">
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
                 <span className="text-3xl font-bold text-white">
                   {Intl.NumberFormat('pt-BR', {
                     currency: 'BRL',
@@ -280,13 +356,13 @@ export default function Plans() {
           >
             <Link
               href={'#'}
-              className="bg-grey-200 hover:border-primary-50 relative flex min-h-[900px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent duration-300 hover:scale-105"
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-grey-200 duration-300 hover:scale-105 hover:border-primary-50"
             >
               <h1 className="px-14 py-4 text-center text-lg font-bold text-white">
                 Pacote Básico
               </h1>
 
-              <div className="bg-grey-900 flex w-full items-center justify-center gap-2 p-8">
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
                 <span className="text-3xl font-bold text-white">
                   {Intl.NumberFormat('pt-BR', {
                     currency: 'BRL',
@@ -296,18 +372,83 @@ export default function Plans() {
                 </span>
               </div>
 
-              <ul className="flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
-                <li>• Abertura da Empresa de forma Gratuita</li>
-                <li>• Contabilidade Completa</li>
-                <li>• Abertura Conta Bancária PJ Gratuita</li>
-                <li>• Certificado Digital Gratuito</li>
+              <ul className="z-50 flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="companyInfo" style={{ width: '90%' }} />
+                  • Abertura da Empresa de forma Gratuita
+                  <Info
+                    size={24}
+                    weight="fill"
+                    data-tooltip-id="companyInfo"
+                    data-tooltip-html="Você paga apenas as taxas do governo e realiza os protocolos físicos.<br /><br />Indicamos o melhor regime tributário e atividades e você recebe a documentação de abertura via E-mail ou Correios dependendo da cidade.<br /><br />A abertura sem sair de casa está disponível para as cidades de Belo Horizonte, Curitiba, Florianópolis e São Paulo."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="accounting" style={{ width: '90%' }} />
+                  • Contabilidade Completa
+                  <Info
+                    size={22}
+                    weight="fill"
+                    data-tooltip-id="accounting"
+                    data-tooltip-html="Todas as obrigações contábeis e legais com Receita Federal, Estadual e Prefeitura: Cálculo e emissão de guia de impostos;<br /><br />Envio de IRPJ, DIPJ, DEFIS;<br /><br />Relatórios contábeis (DRE, Balanço Patrimonial, Balancete etc;<br /><br />Obrigações acessórias (DCTF, SPED, etc..);<br /><br />Documentos assinados por contador especializado."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="account" style={{ width: '90%' }} />
+                  • Abertura Conta Bancária PJ Gratuita
+                  <Info
+                    size={24}
+                    weight="fill"
+                    data-tooltip-id="account"
+                    data-tooltip-html="Sua conta PJ é aberta gratuitamente e sem taxas, após isso é integrada com todos seus processos contábeis e financeiros, sem custos adicionais e sem tarifas.<br /><br />Isso não impede o empresário de utilizar outras contas bancárias."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="certificated" style={{ width: '90%' }} />
+                  • Certificado Digital Gratuito
+                  <Info
+                    size={22}
+                    weight="fill"
+                    data-tooltip-id="certificated"
+                    data-tooltip-html="O Certificado Digital é necessário para a emissão de nota fiscal eletrônica e para acessar os serviços da Receita Federal."
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
                 <li>• Atendimento E-mail Ilimitado</li>
                 <li>• Atendimento WhatsApp Ilimitado</li>
                 <li>• Pró-Labore do Sócio (1 Sócio)</li>
                 <li>• Emissão de CND mensalmente</li>
                 <li>• Emissão de Nota Fiscal (1 por mês)</li>
-                <li>• Importação e Conciliação de Extrato Bancário</li>
-                <li>• Emissão do Alvará de Funcionamento</li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="bank" style={{ width: '90%' }} />
+                  • Importação e Conciliação de Extrato Bancário
+                  <Info
+                    size={28}
+                    weight="fill"
+                    data-tooltip-id="bank"
+                    data-tooltip-html="Sistema de Gestão Integrada (Gestão Financeira de Contas a Pagar e Receber + Emissor de Nota Fiscal + Emissão de Faturas/Recibos + Dashboard Fluxo de Caixa) Versão Mobile e Versão Web"
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li className="flex w-full items-center justify-between">
+                  • Emissão do Alvará de Funcionamento
+                  <Info
+                    size={24}
+                    weight="fill"
+                    data-tooltip-id="bank"
+                    data-tooltip-html="Sistema de Gestão Integrada (Gestão Financeira de Contas a Pagar e Receber + Emissor de Nota Fiscal + Emissão de Faturas/Recibos + Dashboard Fluxo de Caixa) Versão Mobile e Versão Web"
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
                 <li>• Faturamento Mensal Até 50 mil</li>
               </ul>
 
@@ -332,7 +473,124 @@ export default function Plans() {
 
             <Link
               href={'#'}
-              className="bg-secondary-900 hover:border-primary-50 relative flex min-h-[900px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent duration-300 hover:scale-105"
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-50 duration-300 hover:scale-105 hover:border-primary-50"
+            >
+              <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold uppercase text-white">
+                Mais vendido!
+              </div>
+
+              <h1 className="px-14 py-4 text-lg font-bold text-white">
+                Pacote Padrão
+              </h1>
+
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
+                <span className="text-3xl font-bold text-white">
+                  {Intl.NumberFormat('pt-BR', {
+                    currency: 'BRL',
+                    style: 'currency',
+                  }).format(239)}
+                  <span className="text-xs">/mês</span>
+                </span>
+              </div>
+
+              <ul className="z-40 flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
+                <li className="text-base font-bold">
+                  • Tudo o que inclui no pacote BÁSICO MAIS...
+                </li>
+                <li>• Pró-Labore do Sócio (2 Sócios)</li>
+                <li>• Folha de Pagamento (1 funcionário)</li>
+                <li>• Emissão de Nota Fiscal (2 por mês)</li>
+                <li className="flex w-full items-center justify-between">
+                  <Tooltip id="system" style={{ width: '90%' }} />
+                  • Sistema de Gestão (Emissor de Nota Fiscal + Gestão
+                  Financeira)
+                  <Info
+                    size={38}
+                    weight="fill"
+                    data-tooltip-id="system"
+                    data-tooltip-html="Sistema de Gestão Integrada (Gestão Financeira de Contas a Pagar e Receber + Emissor de Nota Fiscal + Emissão de Faturas/Recibos + Dashboard Fluxo de Caixa) Versão Mobile e Versão Web"
+                    data-tooltip-place="top-end"
+                    className="cursor-pointer duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>• Faturamento Mensal Até 80 mil</li>
+              </ul>
+
+              <Image
+                alt="City Image"
+                aria-label="City Image"
+                src={'/city.png'}
+                width={660}
+                height={338}
+                className="absolute bottom-0 h-[15rem] object-cover"
+              />
+
+              <Image
+                alt="Balloons Image"
+                aria-label="Balloons Image"
+                src={'/balloons.gif'}
+                width={330}
+                height={549}
+                className="absolute bottom-0 object-cover"
+              />
+            </Link>
+
+            <Link
+              href={'#'}
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-primary-50 duration-300 hover:scale-105 hover:border-primary-50"
+            >
+              <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
+                Atendimento personalizado
+              </div>
+
+              <h1 className="px-14 py-4 text-lg font-bold text-white">
+                Pacote Plus
+              </h1>
+
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
+                <span className="text-3xl font-bold text-white">
+                  {Intl.NumberFormat('pt-BR', {
+                    currency: 'BRL',
+                    style: 'currency',
+                  }).format(329)}
+                  <span className="text-xs">/mês</span>
+                </span>
+              </div>
+
+              <ul className="flex flex-col items-start justify-center gap-6 px-4 py-8 text-sm font-semibold text-white">
+                <li className="text-base font-bold">
+                  • Tudo o que inclui no pacote PADRÃO MAIS...
+                </li>
+                <li>• Pró-Labore do Sócio (3 Sócios)</li>
+                <li>• Folha de Pagamento (2 funcionários)</li>
+                <li>• Emissão de Nota Fiscal (4 por mês)</li>
+                <li>• Consultoria por Vídeo com Especialista (1 por mês)</li>
+                <li>• Documentação para Licitação</li>
+                <li>• Faturamento Mensal Até 200 mil</li>
+              </ul>
+
+              <Image
+                alt="City Image"
+                aria-label="City Image"
+                src={'/city.png'}
+                width={660}
+                height={338}
+                className="absolute bottom-0 h-[15rem] object-cover"
+              />
+
+              <Image
+                alt="Balloons Image"
+                aria-label="Balloons Image"
+                src={'/balloons.gif'}
+                width={330}
+                height={549}
+                className="absolute bottom-0 object-cover"
+              />
+            </Link>
+
+            <Link
+              href={'#'}
+              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-900 duration-300 hover:scale-105 hover:border-primary-50"
             >
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
@@ -342,7 +600,7 @@ export default function Plans() {
                 Pacote Expert
               </h1>
 
-              <div className="bg-grey-900 flex w-full items-center justify-center gap-2 p-8">
+              <div className="flex w-full items-center justify-center gap-2 bg-grey-900 p-8">
                 <span className="text-3xl font-bold text-white">
                   {Intl.NumberFormat('pt-BR', {
                     currency: 'BRL',

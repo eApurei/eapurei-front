@@ -28,10 +28,13 @@ export default function StepByStep() {
 
           <FileMagnifyingGlass size={72} weight="thin" />
 
-          <Collapsible className="border-secondary-50 mt-4 flex max-w-[322px] flex-col items-start justify-center gap-6 rounded-sm border-2 p-4 shadow-lg">
+          <Collapsible className="mt-4 flex max-w-[322px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
             <div className="flex select-none items-center justify-center gap-2">
               <span className="font-bold">Entendendo suas necessidades</span>
-              <CollapsibleTrigger className="flex items-center justify-center gap-2 text-base">
+              <CollapsibleTrigger
+                className="flex items-center justify-center gap-2 text-base"
+                asChild
+              >
                 <Button variant="ghost" size="sm" className="w-9 p-0">
                   <ArrowElbowRightDown className="h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
@@ -53,10 +56,13 @@ export default function StepByStep() {
 
           <ClipboardText size={72} weight="thin" />
 
-          <Collapsible className="border-secondary-50 mt-4 flex max-w-[288.3px] flex-col items-start justify-center gap-6 rounded-sm border-2 p-4 shadow-lg">
+          <Collapsible className="mt-4 flex max-w-[288.3px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
             <div className="flex select-none items-center justify-center gap-2">
               <span className="font-bold">Registrando a sua empresa</span>
-              <CollapsibleTrigger className="flex items-center justify-center gap-2 text-base">
+              <CollapsibleTrigger
+                className="flex items-center justify-center gap-2 text-base"
+                asChild
+              >
                 <Button variant="ghost" size="sm" className="w-9 p-0">
                   <ArrowElbowRightDown className="h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
@@ -78,10 +84,13 @@ export default function StepByStep() {
 
           <Certificate size={72} weight="thin" />
 
-          <Collapsible className="border-secondary-50 mt-4 flex max-w-[258.6px] flex-col items-start justify-center gap-6 rounded-sm border-2 p-4 shadow-lg">
+          <Collapsible className="mt-4 flex max-w-[258.6px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
             <div className="flex select-none items-center justify-center gap-2">
               <span className="font-bold">Conclusão do Processo</span>
-              <CollapsibleTrigger className="flex items-center justify-center gap-2 text-base">
+              <CollapsibleTrigger
+                className="flex items-center justify-center gap-2 text-base"
+                asChild
+              >
                 <Button variant="ghost" size="sm" className="w-9 p-0">
                   <ArrowElbowRightDown className="h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
@@ -108,7 +117,10 @@ export default function StepByStep() {
               <span className="font-bold">
                 Parabéns! Agora você faz parte da família e Apurei
               </span>
-              <CollapsibleTrigger className="flex items-center justify-between text-left text-base font-bold">
+              <CollapsibleTrigger
+                className="flex items-center justify-between text-left text-base font-bold"
+                asChild
+              >
                 <Button variant="ghost" size="sm" className="w-9 p-1">
                   <ArrowElbowRightDown className="h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
