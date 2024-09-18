@@ -1,3 +1,5 @@
+'use client'
+
 import { Folders, SealCheck, VideoConference } from '@phosphor-icons/react'
 import Image from 'next/image'
 

@@ -1,8 +1,9 @@
 'use client'
 
-import { HandCoins, Sun, Users } from '@phosphor-icons/react'
+import { HandCoins, Moon, Sun, Users } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { IMenuItemsProps } from '@/@types'
 
@@ -30,9 +31,22 @@ const menuItems: IMenuItemsProps[] = [
 ]
 
 export function Header() {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode)
+    if (!isDarkMode) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }
+
   return (
     <>
-      <header className="flex items-center justify-between px-8 py-3">
+      <header className="flex items-center justify-between px-8 py-3 dark:bg-black">
         <Link href={'/'} className="duration-300 hover:opacity-80">
           <Image
             alt="eApurei Logo"
@@ -75,11 +89,18 @@ export function Header() {
             Abrir empresa
           </Link>
 
-          <button type="submit">
-            <Sun
-              size={20}
-              className="text-primary-100 duration-300 hover:scale-110"
-            />
+          <button type="button" onClick={toggleDarkMode}>
+            {isDarkMode ? (
+              <Moon
+                size={20}
+                className="text-primary-100 duration-300 hover:scale-110"
+              />
+            ) : (
+              <Sun
+                size={20}
+                className="text-primary-100 duration-300 hover:scale-110"
+              />
+            )}
           </button>
         </div>
       </header>

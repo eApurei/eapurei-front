@@ -19,6 +19,7 @@ const config: Config = {
         'grey-100': '#525252',
         'grey-200': '#c3c3c3',
         'grey-900': 'rgba(0, 0, 0, 0.2)',
+        'grey-950': 'rgba(0, 0, 0, 0.1)',
       },
       borderRadius: {
         lg: 'var(--radius)',

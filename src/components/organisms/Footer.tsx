@@ -1,3 +1,5 @@
+'use client'
+
 import {
   FacebookLogo,
   InstagramLogo,
@@ -43,14 +45,16 @@ export default function Footer() {
           className="w-full bg-primary-100 opacity-50"
         />
         <section className="flex w-full items-center justify-center gap-8 p-8">
-          <Image
-            alt="eApurei Logo Image"
-            src={'/logo.png'}
-            aria-label="eApurei Logo Image"
-            width={644}
-            height={180}
-            className="w-52"
-          />
+          <Link href={'/'}>
+            <Image
+              alt="eApurei Logo Image"
+              src={'/logo.png'}
+              aria-label="eApurei Logo Image"
+              width={644}
+              height={180}
+              className="w-52"
+            />
+          </Link>
 
           <Separator
             orientation="vertical"

@@ -1,10 +1,12 @@
+'use client'
+
 import { WhatsappLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { Tooltip } from 'react-tooltip'
 
 export default function ButtonWhats() {
   return (
-    <div className="group fixed bottom-8 right-5 flex flex-col items-end justify-center gap-4 rounded-full bg-white p-1">
+    <div className="group fixed bottom-8 right-5 z-50 flex flex-col items-end justify-center gap-4 rounded-full bg-white p-1">
       <Tooltip id="tooltip" />
       <Link
         href={

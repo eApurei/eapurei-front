@@ -1,8 +1,7 @@
-'use client'
-
 import './globals.css'
 
-import { Raleway, Roboto } from 'next/font/google'
+import type { Metadata } from 'next'
+import { Raleway } from 'next/font/google'
 
 import ButtonWhats from '@/components/atoms/ButtonWhats'
 import Footer from '@/components/organisms/Footer'
@@ -14,11 +13,12 @@ const raleway = Raleway({
   subsets: ['latin'],
 })
 
-export const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700', '900'],
-  preload: true,
-  subsets: ['latin'],
-})
+export const metadata: Metadata = {
+  title: {
+    template: '%s | eApurei Contabilidade',
+    default: 'eApurei Contabilidade',
+  },
+}
 
 export default function RootLayout({
   children,
@@ -27,13 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        <title>eApurei Contabilidade</title>
-      </head>
       <body className={`relative antialiased ${raleway.className}`}>
         <Header />
-        {children}
         <ButtonWhats />
+        {children}
         <Footer />
       </body>
     </html>

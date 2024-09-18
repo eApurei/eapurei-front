@@ -6,7 +6,9 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Tooltip } from 'react-tooltip'
 
-import { roboto } from '@/app/layout'
+import { roboto } from '@/lib/fonts'
+
+// import { roboto } from '@/app/layout'
 
 export default function Plans() {
   const [activeTab, setActiveTab] = useState('Empresas de serviço')
@@ -63,10 +65,7 @@ export default function Plans() {
           <section
             className={`${roboto.className} flex w-full items-center justify-center gap-4 py-16`}
           >
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-grey-200 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-grey-200 duration-300 hover:scale-105 hover:border-primary-50">
               <h1 className="px-14 py-4 text-center text-lg font-bold text-white">
                 Pacote Básico
               </h1>
@@ -178,12 +177,24 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
 
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-50 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20básico,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas MEI em início de atividade
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-50 duration-300 hover:scale-105 hover:border-primary-50">
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold uppercase text-white">
                 Mais vendido!
               </div>
@@ -242,12 +253,24 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
 
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-primary-50 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20padrão,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas MEI já em funcionamento
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-primary-50 duration-300 hover:scale-105 hover:border-primary-50">
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
               </div>
@@ -295,12 +318,25 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
 
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-900 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20plus,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas do Simples Nacional em início de
+                  atividade
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-900 duration-300 hover:scale-105 hover:border-primary-50">
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
               </div>
@@ -348,16 +384,29 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
+
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20expert,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas do Simples Nacional e Lucro
+                  Presumido já em funcionamento
+                </p>
+              </div>
+            </div>
           </section>
         ) : (
           <section
             className={`${roboto.className} flex w-full items-center justify-center gap-4 py-16`}
           >
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-grey-200 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-grey-200 duration-300 hover:scale-105 hover:border-primary-50">
               <h1 className="px-14 py-4 text-center text-lg font-bold text-white">
                 Pacote Básico
               </h1>
@@ -469,12 +518,24 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
 
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-50 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20básico,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas MEI em início de atividade
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-50 duration-300 hover:scale-105 hover:border-primary-50">
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold uppercase text-white">
                 Mais vendido!
               </div>
@@ -533,12 +594,24 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
 
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-primary-50 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20padrão,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas MEI já em funcionamento
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-primary-50 duration-300 hover:scale-105 hover:border-primary-50">
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
               </div>
@@ -586,12 +659,25 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
 
-            <Link
-              href={'#'}
-              className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-900 duration-300 hover:scale-105 hover:border-primary-50"
-            >
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20plus,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas do Simples Nacional em início de
+                  atividade
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex min-h-[1000px] max-w-[280px] flex-col items-center justify-start rounded-sm border-2 border-transparent bg-secondary-900 duration-300 hover:scale-105 hover:border-primary-50">
               <div className="-mt-[30px] rounded-t-lg bg-orange-600 px-8 py-1 text-sm font-bold text-white">
                 Atendimento personalizado
               </div>
@@ -639,7 +725,23 @@ export default function Plans() {
                 height={549}
                 className="absolute bottom-0 object-cover"
               />
-            </Link>
+
+              <div className="absolute bottom-0 z-50 flex flex-col items-center justify-center gap-4 py-4">
+                <Link
+                  href={
+                    'https://wa.me/5515991901126?text=Ol%C3%A1,%20desejo%20contratar%20o%20pacote%20expert,%20por%20gentileza.'
+                  }
+                  target="_blank"
+                  className="rounded-full bg-primary-100 px-8 py-1 font-bold uppercase text-white duration-300 hover:scale-95"
+                >
+                  contratar
+                </Link>
+                <p className="bg-grey-900 px-4 text-center text-xs font-medium text-white">
+                  *Plano indicado para empresas do Simples Nacional e Lucro
+                  Presumido já em funcionamento
+                </p>
+              </div>
+            </div>
           </section>
         )}
       </div>
