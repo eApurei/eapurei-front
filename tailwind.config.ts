@@ -27,6 +27,11 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
     },
+    screens: {
+      lg_1: { max: '1120px' },
+      lg_2: { max: '960px' },
+      md_1: { max: '768px' },
+    },
   },
   plugins: [require('tailwindcss-animate')],
 }

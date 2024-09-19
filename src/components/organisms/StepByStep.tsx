@@ -11,6 +11,7 @@ import {
   NumberCircleTwo,
   SealCheck,
 } from '@phosphor-icons/react'
+import { useState } from 'react'
 
 import {
   Collapsible,
@@ -22,28 +23,42 @@ import ButtonComponent from '../atoms/ButtonComponent'
 import { Button } from '../ui/button'
 
 export default function StepByStep() {
+  const [collapse, setCollapse] = useState<boolean>(true)
+
+  const handleCollapse = () => setCollapse(!collapse)
+
   return (
     <main className="flex w-full flex-col items-center justify-center gap-16 bg-white p-8">
-      <div className="flex w-full items-start justify-between">
+      <div className="flex w-full flex-wrap items-start justify-center gap-4">
         <div className="flex flex-col items-center justify-center gap-2 text-secondary-100">
           <NumberCircleOne size={48} weight="fill" />
 
-          <FileMagnifyingGlass size={72} weight="thin" />
+          <FileMagnifyingGlass size={72} weight="thin" className="lg_2:w-12" />
 
-          <Collapsible className="mt-4 flex max-w-[322px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
+          <Collapsible
+            open={collapse}
+            className="lg_2:max-w-[261.5px] mt-4 flex max-w-[322px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg"
+          >
             <div className="flex select-none items-center justify-center gap-2">
-              <span className="font-bold">Entendendo suas necessidades</span>
+              <span className="lg_2:text-xs font-bold">
+                Entendendo suas necessidades
+              </span>
               <CollapsibleTrigger
                 className="flex items-center justify-center gap-2 text-base"
                 asChild
               >
-                <Button variant="ghost" size="sm" className="w-9 p-0">
-                  <ArrowElbowRightDown className="h-6 w-6 font-bold" />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex w-9 items-center justify-center p-0"
+                  onClick={() => handleCollapse()}
+                >
+                  <ArrowElbowRightDown className="lg_2:h-4 lg_2:w-4 h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal text-black">
+            <CollapsibleContent className="lg_2:text-xs text-sm font-normal text-black">
               Faremos uma vídeo-conferência para entender a sua necessidades e
               juntos avaliarmos qual o melhor perfil tributário para a sua
               empresa. Abordaremos sobre a natureza jurídica, o porte
@@ -56,22 +71,28 @@ export default function StepByStep() {
         <div className="flex flex-col items-center justify-center gap-2 text-secondary-100">
           <NumberCircleTwo size={48} weight="fill" />
 
-          <ClipboardText size={72} weight="thin" />
+          <ClipboardText size={72} weight="thin" className="lg_2:w-12" />
 
-          <Collapsible className="mt-4 flex max-w-[288.3px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
+          <Collapsible className="lg_2:max-w-[236.5px] mt-4 flex max-w-[288.3px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
             <div className="flex select-none items-center justify-center gap-2">
-              <span className="font-bold">Registrando a sua empresa</span>
+              <span className="lg_2:text-xs font-bold">
+                Registrando a sua empresa
+              </span>
               <CollapsibleTrigger
                 className="flex items-center justify-center gap-2 text-base"
                 asChild
               >
-                <Button variant="ghost" size="sm" className="w-9 p-0">
-                  <ArrowElbowRightDown className="h-6 w-6 font-bold" />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex w-9 items-center justify-center p-0"
+                >
+                  <ArrowElbowRightDown className="lg_2:h-4 lg_2:w-4 h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal text-black">
+            <CollapsibleContent className="lg_2:text-xs text-sm font-normal text-black">
               Iniciamos o processo de registro em todos os órgãos, sempre
               comunicando sobre o que está acontecendo, como prazos e andamentos
               de processos. Essa etapa é feita com muita atenção e
@@ -84,22 +105,28 @@ export default function StepByStep() {
         <div className="flex flex-col items-center justify-center gap-2 text-secondary-100">
           <NumberCircleThree size={48} weight="fill" />
 
-          <Certificate size={72} weight="thin" />
+          <Certificate size={72} weight="thin" className="lg_2:w-12" />
 
-          <Collapsible className="mt-4 flex max-w-[258.6px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
+          <Collapsible className="lg_2:max-w-[214px] mt-4 flex max-w-[258.6px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-secondary-50 p-4 shadow-lg">
             <div className="flex select-none items-center justify-center gap-2">
-              <span className="font-bold">Conclusão do Processo</span>
+              <span className="lg_2:text-xs font-bold">
+                Conclusão do Processo
+              </span>
               <CollapsibleTrigger
                 className="flex items-center justify-center gap-2 text-base"
                 asChild
               >
-                <Button variant="ghost" size="sm" className="w-9 p-0">
-                  <ArrowElbowRightDown className="h-6 w-6 font-bold" />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex w-9 items-center justify-center p-0"
+                >
+                  <ArrowElbowRightDown className="lg_2:h-4 lg_2:w-4 h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal text-black">
+            <CollapsibleContent className="lg_2:text-xs text-sm font-normal text-black">
               Concluindo todas as etapas, enviaremos todos os documentos
               pertinentes a sua empresa para você, cliente eApurei
               Contabilidade. Daqui pra frente, começaremos nosso assessoramento
@@ -112,24 +139,28 @@ export default function StepByStep() {
         <div className="flex flex-col items-center justify-center gap-2 text-primary-100">
           <SealCheck size={48} weight="fill" />
 
-          <HandsClapping size={72} weight="thin" />
+          <HandsClapping size={72} weight="thin" className="lg_2:w-12" />
 
           <Collapsible className="mt-4 flex max-w-[280px] flex-col items-start justify-center gap-6 rounded-sm border-2 border-primary-100 bg-primary-100 p-4 text-white shadow-lg">
-            <div className="flex select-none items-center justify-center gap-2">
-              <span className="font-bold">
+            <div className="flex select-none items-center justify-between gap-2">
+              <span className="lg_2:text-xs lg_2:w-[75%] font-bold">
                 Parabéns! Agora você faz parte da família e Apurei
               </span>
               <CollapsibleTrigger
                 className="flex items-center justify-between text-left text-base font-bold"
                 asChild
               >
-                <Button variant="ghost" size="sm" className="w-9 p-1">
-                  <ArrowElbowRightDown className="h-6 w-6 font-bold" />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex w-9 items-center justify-center p-1"
+                >
+                  <ArrowElbowRightDown className="lg_2:h-4 lg_2:w-4 h-6 w-6 font-bold" />
                   <span className="sr-only">Toggle</span>
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal">
+            <CollapsibleContent className="lg_2:text-xs text-sm font-normal">
               Nesta etapa comemoramos o primeiro êxito em conjunto, a
               constituição da sua empresa. Na eApurei cada empresa é única, pois
               sabemos que estamos trabalhando com o sonho de cada cliente. Além

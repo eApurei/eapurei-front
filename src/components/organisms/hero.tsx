@@ -26,12 +26,12 @@ const contentList: IContentListProps[] = [
 
 export default function Hero() {
   return (
-    <main className="flex w-full items-center justify-between px-8 py-16">
-      <section className="flex w-1/2 flex-col items-start justify-center gap-4">
-        <h1 className="text-4xl font-bold text-primary-100">
+    <main className="lg_2:px-2 flex w-full items-center justify-between px-8 py-16">
+      <section className="lg_1:w-[60%] lg_2:w-1/2 flex w-1/2 flex-col items-start justify-center gap-4">
+        <h1 className="lg_1:text-3xl lg_2:text-2xl text-4xl font-bold text-primary-100">
           Contabilidade online para Área da Saúde e Consultores em Geral.
         </h1>
-        <p className="font-semibold">
+        <p className="lg_1:text-sm lg_2:text-xs font-semibold">
           Somos um dos maiores escritórios contábeis online para empresas da{' '}
           <span className="font-bold text-secondary-100">Área da Saúde</span> e{' '}
           <span className="font-bold text-secondary-100">Consultores</span> do
@@ -39,13 +39,13 @@ export default function Hero() {
           vídeo-conferência.
         </p>
 
-        <ul className="flex flex-col items-start justify-center gap-1">
+        <ul className="lg_1:text-sm lg_2:text-xs flex flex-col items-start justify-center gap-1">
           {contentList.map((item, index) => {
             return <li key={index}>{item.content}</li>
           })}
         </ul>
 
-        <h4 className="text-2xl font-extrabold text-black">
+        <h4 className="lg_1:text-xl lg_2:text-lg text-2xl font-extrabold text-black">
           Seja nosso Cliente!
         </h4>
 
@@ -61,14 +61,14 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="flex w-1/2 items-center justify-center">
+      <section className="lg_1:w-[40%] flex w-1/2 items-center justify-center">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center rounded-full border-8 border-black bg-primary-100 px-20 py-2">
+          <div className="lg_2:px-12 flex items-center justify-center rounded-full border-8 border-black bg-primary-100 px-20 py-2">
             <Image
               src={'/gustavo.png'}
               alt="Gustavo Image"
               aria-label="Gustavo Image"
-              className="w-56"
+              className="lg_2:w-40 w-56"
               width={1426}
               height={2352}
             />
@@ -78,7 +78,7 @@ export default function Hero() {
               src={'/shortLogo.png'}
               alt="Short Logo Image"
               aria-label="Short Logo Image"
-              className="w-20"
+              className="lg_2:w-16 w-20"
               width={380}
               height={444}
             />
