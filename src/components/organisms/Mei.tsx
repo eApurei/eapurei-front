@@ -4,14 +4,14 @@ import ButtonComponent from '../atoms/ButtonComponent'
 
 export default function Mei() {
   return (
-    <main className="lg_2:px-2 flex w-full select-none items-center justify-between bg-secondary-100 px-8 py-16">
+    <main className="flex w-full select-none items-center justify-between bg-secondary-100 px-8 py-16 lg_2:px-2">
       <section className="flex flex-1 flex-col items-start justify-center gap-4">
-        <h1 className="lg_2:text-xl text-2xl font-bold text-white">
+        <h1 className="text-2xl font-bold text-white lg_2:text-xl">
           Seu <span className="text-yellow-300">MEI</span> cresceu? Nós cuidamos
           do desenquadramento com excelência!
         </h1>
 
-        <div className="lg_1:text-sm lg_2:text-xs flex flex-col items-center justify-center gap-4 font-normal text-white">
+        <div className="flex flex-col items-center justify-center gap-4 font-normal text-white lg_1:text-sm lg_2:text-xs">
           <p>
             Não aguarde ultrapassar o limite de faturamento do MEI para fazer o
             desenquadramento, pois em alguns casos você estará sujeito a multas
@@ -38,7 +38,7 @@ export default function Mei() {
             src={'/larissa.png'}
             alt="Larissa Image"
             aria-label="Larissa Image"
-            className="lg_2:w-72 w-96"
+            className="w-96 lg_2:w-72"
             width={500}
             height={500}
           />

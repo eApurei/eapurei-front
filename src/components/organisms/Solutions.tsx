@@ -61,17 +61,17 @@ export default function Solutions() {
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
   return (
-    <div className="lg_2:px-2 flex w-full flex-col items-center justify-center gap-4 bg-white p-8">
-      <h1 className="lg_1:text-2xl lg_2:text-xl text-3xl font-bold uppercase">
+    <div className="flex w-full flex-col items-center justify-center gap-4 bg-white p-8 lg_2:px-2">
+      <h1 className="text-3xl font-bold uppercase lg_1:text-2xl lg_2:text-xl">
         Soluções ideais para o seu negócio.
       </h1>
 
       <nav className="mt-8">
-        <ul className="lg_1:gap-2 flex select-none flex-wrap items-center justify-center gap-4">
+        <ul className="flex select-none flex-wrap items-center justify-center gap-4 lg_1:gap-2">
           {solutions.map(({ icon: Icon, label, weight }, index) => (
             <li
               key={index}
-              className={`${activeIndex === index ? 'bg-secondary-100 text-white' : ''} lg_1:text-sm lg_2:text-xs lg_1:px-2 lg_2:py-1 flex cursor-pointer items-center justify-center gap-2 rounded-md border border-secondary-100 px-4 py-2 font-bold text-secondary-100 duration-300 hover:bg-secondary-100 hover:text-white`}
+              className={`${activeIndex === index ? 'bg-secondary-100 text-white' : ''} flex cursor-pointer items-center justify-center gap-2 rounded-md border border-secondary-100 px-4 py-2 font-bold text-secondary-100 duration-300 hover:bg-secondary-100 hover:text-white lg_1:px-2 lg_1:text-sm lg_2:py-1 lg_2:text-xs`}
               onClick={() => setActiveIndex(index)}
             >
               <Icon weight={weight} size={24} className="lg_2:w-4" />
@@ -87,12 +87,12 @@ export default function Solutions() {
           src={`/solutions/${activeIndex + 1}.png`}
           width={1080}
           height={1080}
-          className="lg_2:w-96 w-[32rem]"
+          className="w-[32rem] lg_2:w-96"
           aria-label={`Solution ${activeIndex + 1} Image`}
         />
 
         <p
-          className={`lg_2:text-xs w-[70%] rounded-md bg-grey-950 p-4 text-center text-base font-bold ${roboto.className}`}
+          className={`w-[70%] rounded-md bg-grey-950 p-4 text-center text-base font-bold lg_2:text-xs ${roboto.className}`}
         >
           {solutions[activeIndex].description}
         </p>

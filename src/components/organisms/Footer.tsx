@@ -52,7 +52,7 @@ export default function Footer() {
               aria-label="eApurei Logo Image"
               width={644}
               height={180}
-              className="lg_2:w-40 w-52"
+              className="w-52 lg_2:w-40"
             />
           </Link>
 
@@ -62,7 +62,7 @@ export default function Footer() {
           />
 
           <div className="flex flex-col items-center justify-center gap-4">
-            <h3 className="lg_2:text-base text-lg font-bold text-primary-100">
+            <h3 className="text-lg font-bold text-primary-100 lg_2:text-base">
               Redes Sociais
             </h3>
 
@@ -75,7 +75,7 @@ export default function Footer() {
                 <InstagramLogo
                   size={28}
                   weight={'fill'}
-                  className="lg_2:w-5 text-primary-100 duration-300 hover:scale-105 hover:opacity-70"
+                  className="text-primary-100 duration-300 hover:scale-105 hover:opacity-70 lg_2:w-5"
                 />
               </Link>
 
@@ -87,7 +87,7 @@ export default function Footer() {
                 <LinkedinLogo
                   size={28}
                   weight={'fill'}
-                  className="lg_2:w-5 text-primary-100 duration-300 hover:scale-105 hover:opacity-70"
+                  className="text-primary-100 duration-300 hover:scale-105 hover:opacity-70 lg_2:w-5"
                 />
               </Link>
 
@@ -99,7 +99,7 @@ export default function Footer() {
                 <FacebookLogo
                   size={28}
                   weight={'fill'}
-                  className="lg_2:w-5 text-primary-100 duration-300 hover:scale-105 hover:opacity-70"
+                  className="text-primary-100 duration-300 hover:scale-105 hover:opacity-70 lg_2:w-5"
                 />
               </Link>
 
@@ -111,7 +111,7 @@ export default function Footer() {
                 <YoutubeLogo
                   size={28}
                   weight={'fill'}
-                  className="lg_2:w-5 text-primary-100 duration-300 hover:scale-105 hover:opacity-70"
+                  className="text-primary-100 duration-300 hover:scale-105 hover:opacity-70 lg_2:w-5"
                 />
               </Link>
             </div>
@@ -123,7 +123,7 @@ export default function Footer() {
           />
 
           <nav className="flex items-center justify-center">
-            <ul className="lg_1:text-sm lg_2:gap-2 lg_2:text-xs flex items-center justify-center gap-4 text-base font-bold text-primary-100">
+            <ul className="flex items-center justify-center gap-4 text-base font-bold text-primary-100 lg_1:text-sm lg_2:gap-2 lg_2:text-xs">
               {menuItems.map((item, index) => {
                 return (
                   <Link href={item.href} key={index}>
@@ -137,7 +137,7 @@ export default function Footer() {
           </nav>
         </section>
 
-        <p className="lg_2:text-[10px] w-full bg-primary-100 py-1 text-center text-xs font-normal text-white">
+        <p className="w-full bg-primary-100 py-1 text-center text-xs font-normal text-white lg_2:text-[10px]">
           Escritório de Contabilidade | Contabilidade Online | Mais de 5.000
           clientes satisfeitos | Todos os direitos reservados &copy; eApurei
           2022

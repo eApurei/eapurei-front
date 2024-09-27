@@ -31,6 +31,7 @@ const config: Config = {
       lg_1: { max: '1120px' },
       lg_2: { max: '960px' },
       md_1: { max: '768px' },
+      md_2: { max: '280px' },
     },
   },
   plugins: [require('tailwindcss-animate')],

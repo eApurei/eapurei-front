@@ -66,7 +66,7 @@ export function Header() {
 
   return (
     <>
-      <header className="lg_2:px-2 flex items-center justify-between px-8 py-3 dark:bg-black">
+      <header className="flex items-center justify-between px-8 py-3 dark:bg-black lg_2:px-2">
         <Link href={'/'} className="duration-300 hover:opacity-80">
           <Image
             alt="eApurei Logo"
@@ -74,12 +74,12 @@ export function Header() {
             width={644}
             height={180}
             aria-label="eApurei Logo"
-            className="lg_1:w-40 lg_2:w-28 w-48"
+            className="w-48 lg_1:w-40 lg_2:w-28"
           />
         </Link>
 
-        <nav className="md_1:hidden flex items-center justify-center">
-          <ul className="lg_1:text-sm lg_2:gap-2 lg_2:text-xs flex items-center justify-center gap-4 text-base font-bold text-primary-100">
+        <nav className="flex items-center justify-center md_1:hidden">
+          <ul className="flex items-center justify-center gap-4 text-base font-bold text-primary-100 lg_1:text-sm lg_2:gap-2 lg_2:text-xs">
             {menuItems.map((item, index) => {
               return (
                 <Link href={item.href} key={index}>
@@ -92,23 +92,23 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="lg_1:gap-2 md_1:gap-4 flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 lg_1:gap-2 md_1:gap-4">
           <Link
             href={'#'}
-            className="md_1:hidden lg_1:text-xs lg_2:px-2 lg_2:py-1 flex items-center gap-2 rounded-[3px] bg-gray-500 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80"
+            className="flex items-center gap-2 rounded-[3px] bg-gray-500 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1 md_1:hidden"
           >
-            <Users size={20} weight="fill" className="lg_1:w-4 text-white" />
+            <Users size={20} weight="fill" className="text-white lg_1:w-4" />
             Área do Cliente
           </Link>
 
           <Link
             href={'#'}
-            className="md_1:hidden lg_1:text-xs lg_2:px-2 lg_2:py-1 flex items-center gap-2 rounded-[3px] bg-primary-100 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80"
+            className="flex items-center gap-2 rounded-[3px] bg-primary-100 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1 md_1:hidden"
           >
             <HandCoins
               size={20}
               weight="fill"
-              className="lg_1:w-4 text-white"
+              className="text-white lg_1:w-4"
             />
             Abrir empresa
           </Link>
@@ -129,7 +129,7 @@ export function Header() {
           </button>
 
           <div className="relative" onClick={() => handleDropDown()}>
-            <label className="md_1:flex hidden w-6 flex-col gap-[5.5px]">
+            <label className="hidden w-6 flex-col gap-[5.5px] md_1:flex">
               <input
                 className="peer hidden"
                 type="checkbox"
@@ -167,24 +167,24 @@ export function Header() {
 
                   <Link
                     href={'#'}
-                    className="lg_1:text-xs lg_2:px-2 lg_2:py-1 flex w-full items-center gap-2 rounded-[3px] bg-gray-500 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80"
+                    className="flex w-full items-center gap-2 rounded-[3px] bg-gray-500 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1"
                   >
                     <Users
                       size={20}
                       weight="fill"
-                      className="lg_1:w-4 text-white"
+                      className="text-white lg_1:w-4"
                     />
                     Área do Cliente
                   </Link>
 
                   <Link
                     href={'#'}
-                    className="lg_1:text-xs lg_2:px-2 lg_2:py-1 flex w-full items-center gap-2 rounded-[3px] bg-primary-100 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80"
+                    className="flex w-full items-center gap-2 rounded-[3px] bg-primary-100 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1"
                   >
                     <HandCoins
                       size={20}
                       weight="fill"
-                      className="lg_1:w-4 text-white"
+                      className="text-white lg_1:w-4"
                     />
                     Abrir empresa
                   </Link>

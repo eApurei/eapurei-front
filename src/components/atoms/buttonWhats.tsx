@@ -6,7 +6,7 @@ import { Tooltip } from 'react-tooltip'
 
 export default function ButtonWhats() {
   return (
-    <div className="lg_2:px-2 group fixed bottom-8 right-5 z-50 flex flex-col items-end justify-center gap-4 rounded-full bg-white p-1">
+    <div className="group fixed bottom-8 right-5 z-50 flex flex-col items-end justify-center gap-4 rounded-full bg-white p-1 lg_2:px-2">
       <Tooltip id="tooltip" className="tooltip-custom" />
       <Link
         href={
@@ -21,7 +21,7 @@ export default function ButtonWhats() {
         <WhatsappLogo
           size={44}
           weight="fill"
-          className="lg_2:w-8 animate-pulse text-primary-100 duration-500 hover:scale-105"
+          className="animate-pulse text-primary-100 duration-500 hover:scale-105 lg_2:w-8"
         />
       </Link>
     </div>
