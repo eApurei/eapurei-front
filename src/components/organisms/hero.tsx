@@ -26,26 +26,31 @@ const contentList: IContentListProps[] = [
 
 export default function Hero() {
   return (
-    <main className="flex w-full items-center justify-between px-8 py-16 lg_2:px-2">
+    <main className="flex w-full items-center justify-between px-8 py-16 dark:bg-grey-100 lg_2:px-2">
       <section className="flex w-1/2 flex-col items-start justify-center gap-4 lg_1:w-[60%] lg_2:w-1/2">
         <h1 className="text-4xl font-bold text-primary-100 lg_1:text-3xl lg_2:text-2xl">
           Contabilidade online para Área da Saúde e Consultores em Geral.
         </h1>
-        <p className="font-semibold lg_1:text-sm lg_2:text-xs">
+        <p className="font-semibold dark:text-white lg_1:text-sm lg_2:text-xs">
           Somos um dos maiores escritórios contábeis online para empresas da{' '}
-          <span className="font-bold text-secondary-100">Área da Saúde</span> e{' '}
-          <span className="font-bold text-secondary-100">Consultores</span> do
-          Brasil, com mais de 2.000 clientes satisfeitos e atendidos por
+          <span className="font-bold text-secondary-100 dark:text-white">
+            Área da Saúde
+          </span>{' '}
+          e{' '}
+          <span className="font-bold text-secondary-100 dark:text-white">
+            Consultores
+          </span>{' '}
+          do Brasil, com mais de 2.000 clientes satisfeitos e atendidos por
           vídeo-conferência.
         </p>
 
-        <ul className="flex flex-col items-start justify-center gap-1 lg_1:text-sm lg_2:text-xs">
+        <ul className="flex flex-col items-start justify-center gap-1 dark:text-white lg_1:text-sm lg_2:text-xs">
           {contentList.map((item, index) => {
             return <li key={index}>{item.content}</li>
           })}
         </ul>
 
-        <h4 className="text-2xl font-extrabold text-black lg_1:text-xl lg_2:text-lg">
+        <h4 className="text-2xl font-extrabold text-black dark:text-white lg_1:text-xl lg_2:text-lg">
           Seja nosso Cliente!
         </h4>
 

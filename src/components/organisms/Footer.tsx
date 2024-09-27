@@ -39,10 +39,10 @@ const menuItems: IMenuItemsProps[] = [
 export default function Footer() {
   return (
     <>
-      <footer className="flex w-full flex-col items-center justify-center">
+      <footer className="dark:bg-dark-100 flex w-full flex-col items-center justify-center">
         <Separator
           orientation="horizontal"
-          className="w-full bg-primary-100 opacity-50"
+          className="w-full bg-primary-100 opacity-50 dark:bg-white"
         />
         <section className="flex w-full items-center justify-center gap-8 p-8">
           <Link href={'/'}>
@@ -58,7 +58,7 @@ export default function Footer() {
 
           <Separator
             orientation="vertical"
-            className="h-20 bg-primary-100 opacity-60"
+            className="h-20 bg-primary-100 opacity-60 dark:bg-white"
           />
 
           <div className="flex flex-col items-center justify-center gap-4">
@@ -119,7 +119,7 @@ export default function Footer() {
 
           <Separator
             orientation="vertical"
-            className="h-20 bg-primary-100 opacity-60"
+            className="h-20 bg-primary-100 opacity-60 dark:bg-white"
           />
 
           <nav className="flex items-center justify-center">

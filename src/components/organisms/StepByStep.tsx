@@ -28,9 +28,9 @@ export default function StepByStep() {
   const handleCollapse = () => setCollapse(!collapse)
 
   return (
-    <main className="flex w-full flex-col items-center justify-center gap-16 bg-white p-8">
+    <main className="flex w-full flex-col items-center justify-center gap-16 bg-white p-8 dark:bg-grey-100">
       <div className="flex w-full flex-wrap items-start justify-center gap-4">
-        <div className="flex flex-col items-center justify-center gap-2 text-secondary-100">
+        <div className="flex flex-col items-center justify-center gap-2 text-secondary-100 dark:text-white">
           <NumberCircleOne size={48} weight="fill" />
 
           <FileMagnifyingGlass size={72} weight="thin" className="lg_2:w-12" />
@@ -58,7 +58,7 @@ export default function StepByStep() {
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal text-black lg_2:text-xs">
+            <CollapsibleContent className="text-sm font-normal text-black dark:text-white lg_2:text-xs">
               Faremos uma vídeo-conferência para entender a sua necessidades e
               juntos avaliarmos qual o melhor perfil tributário para a sua
               empresa. Abordaremos sobre a natureza jurídica, o porte
@@ -68,7 +68,7 @@ export default function StepByStep() {
           </Collapsible>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-2 text-secondary-100">
+        <div className="flex flex-col items-center justify-center gap-2 text-secondary-100 dark:text-white">
           <NumberCircleTwo size={48} weight="fill" />
 
           <ClipboardText size={72} weight="thin" className="lg_2:w-12" />
@@ -92,7 +92,7 @@ export default function StepByStep() {
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal text-black lg_2:text-xs">
+            <CollapsibleContent className="text-sm font-normal text-black dark:text-white lg_2:text-xs">
               Iniciamos o processo de registro em todos os órgãos, sempre
               comunicando sobre o que está acontecendo, como prazos e andamentos
               de processos. Essa etapa é feita com muita atenção e
@@ -102,7 +102,7 @@ export default function StepByStep() {
           </Collapsible>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-2 text-secondary-100">
+        <div className="flex flex-col items-center justify-center gap-2 text-secondary-100 dark:text-white">
           <NumberCircleThree size={48} weight="fill" />
 
           <Certificate size={72} weight="thin" className="lg_2:w-12" />
@@ -126,7 +126,7 @@ export default function StepByStep() {
                 </Button>
               </CollapsibleTrigger>
             </div>
-            <CollapsibleContent className="text-sm font-normal text-black lg_2:text-xs">
+            <CollapsibleContent className="text-sm font-normal text-black dark:text-white lg_2:text-xs">
               Concluindo todas as etapas, enviaremos todos os documentos
               pertinentes a sua empresa para você, cliente eApurei
               Contabilidade. Daqui pra frente, começaremos nosso assessoramento

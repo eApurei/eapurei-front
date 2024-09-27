@@ -25,13 +25,13 @@ export default function Plans() {
   }
 
   return (
-    <main className="flex w-full flex-col items-center justify-center gap-8 bg-white p-8">
-      <h1 className="text-4xl font-bold text-grey-100 lg_1:text-3xl">
+    <main className="flex w-full flex-col items-center justify-center gap-8 bg-white p-8 dark:bg-grey-100">
+      <h1 className="text-4xl font-bold text-grey-100 dark:text-white lg_1:text-3xl">
         Confira nossos planos
       </h1>
 
       <nav>
-        <ul className="flex items-center justify-center border-b border-gray-300">
+        <ul className="flex items-center justify-center border-b border-gray-300 dark:border-grey-900">
           <li
             className={`cursor-pointer border-b-2 p-4 text-lg text-primary-100 duration-300 hover:border-emerald-300 hover:bg-tertiary-100 lg_1:text-base ${
               activeTab === 'Empresas de serviço'

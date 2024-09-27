@@ -61,8 +61,8 @@ export default function Solutions() {
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-4 bg-white p-8 lg_2:px-2">
-      <h1 className="text-3xl font-bold uppercase lg_1:text-2xl lg_2:text-xl">
+    <div className="flex w-full flex-col items-center justify-center gap-4 bg-white p-8 dark:bg-grey-100 lg_2:px-2">
+      <h1 className="text-3xl font-bold uppercase dark:text-white lg_1:text-2xl lg_2:text-xl">
         Soluções ideais para o seu negócio.
       </h1>
 
@@ -71,7 +71,7 @@ export default function Solutions() {
           {solutions.map(({ icon: Icon, label, weight }, index) => (
             <li
               key={index}
-              className={`${activeIndex === index ? 'bg-secondary-100 text-white' : ''} flex cursor-pointer items-center justify-center gap-2 rounded-md border border-secondary-100 px-4 py-2 font-bold text-secondary-100 duration-300 hover:bg-secondary-100 hover:text-white lg_1:px-2 lg_1:text-sm lg_2:py-1 lg_2:text-xs`}
+              className={`${activeIndex === index ? 'bg-secondary-100 text-white dark:bg-white dark:text-secondary-100' : ''} flex cursor-pointer items-center justify-center gap-2 rounded-md border border-secondary-100 px-4 py-2 font-bold text-secondary-100 duration-300 hover:bg-secondary-100 hover:text-white dark:border-white dark:text-white hover:dark:bg-white hover:dark:text-secondary-100 lg_1:px-2 lg_1:text-sm lg_2:py-1 lg_2:text-xs`}
               onClick={() => setActiveIndex(index)}
             >
               <Icon weight={weight} size={24} className="lg_2:w-4" />
@@ -92,7 +92,7 @@ export default function Solutions() {
         />
 
         <p
-          className={`w-[70%] rounded-md bg-grey-950 p-4 text-center text-base font-bold lg_2:text-xs ${roboto.className}`}
+          className={`dark:bg-dark-200 w-[70%] rounded-md bg-grey-950 p-4 text-center text-base font-bold lg_2:text-xs ${roboto.className}`}
         >
           {solutions[activeIndex].description}
         </p>
