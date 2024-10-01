@@ -1,9 +1,20 @@
-export default function Page() {
-  const x = 'Gustavo'
+import { Fragment } from 'react'
 
+import Plans from '@/components/organisms/Plans'
+
+import AdditionalInformation from './components/AdditionalInformation'
+import Hero from './components/Hero'
+import PlansSelect from './components/PlansSelect'
+import SolutionsDesignedForYou from './components/SolutionsDesignedForYou'
+
+export default function Page() {
   return (
-    <>
-      <div className="flex flex-col text-amber-400">Planoss {x}</div>
-    </>
+    <Fragment>
+      <Hero />
+      <PlansSelect />
+      <Plans />
+      <AdditionalInformation />
+      <SolutionsDesignedForYou />
+    </Fragment>
   )
 }

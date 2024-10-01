@@ -8,8 +8,6 @@ import { Tooltip } from 'react-tooltip'
 
 import { roboto } from '@/lib/fonts'
 
-// import { roboto } from '@/app/layout'
-
 export default function Plans() {
   const [activeTab, setActiveTab] = useState('Empresas de serviço')
   const [fadeIn, setFadeIn] = useState(true)

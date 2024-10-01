@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px #6cc2b6;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;

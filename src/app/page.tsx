@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 import ChangingTheMeter from '@/components/organisms/ChangingTheMeter'
 import Hero from '@/components/organisms/Hero'
 import Mei from '@/components/organisms/Mei'
@@ -8,7 +10,7 @@ import ThinkInCompany from '@/components/organisms/ThinkInCompany'
 
 export default function Home() {
   return (
-    <>
+    <Fragment>
       <Hero />
       <Mei />
       <Solutions />
@@ -16,6 +18,6 @@ export default function Home() {
       <StepByStep />
       <ChangingTheMeter />
       <Plans />
-    </>
+    </Fragment>
   )
 }

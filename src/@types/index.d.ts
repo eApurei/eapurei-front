@@ -12,3 +12,14 @@ export interface IButtonProps {
   linkTo: string
   style?: string
 }
+
+export interface BenefitsProps {
+  description: string
+  icon: React.ElementType
+  iconSize: number
+}
+
+export interface SelectItemsProps {
+  label: string
+  value: string
+}
