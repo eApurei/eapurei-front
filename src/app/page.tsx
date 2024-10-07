@@ -1,19 +1,23 @@
-'use client'
+import { Fragment } from 'react'
 
-import { useRouter } from 'next/navigation'
+import ChangingTheMeter from '@/components/organisms/ChangingTheMeter'
+import Hero from '@/components/organisms/Hero'
+import Mei from '@/components/organisms/Mei'
+import Plans from '@/components/organisms/Plans'
+import Solutions from '@/components/organisms/Solutions'
+import StepByStep from '@/components/organisms/StepByStep'
+import ThinkInCompany from '@/components/organisms/ThinkInCompany'
 
 export default function Home() {
-  const { push } = useRouter()
   return (
-    <>
-      <h1>Hello World</h1>
-      <button
-        className="rounded-md bg-stone-500 p-2 text-white"
-        type="button"
-        onClick={() => push('/planos')}
-      >
-        Clicar para ir para planos
-      </button>
-    </>
+    <Fragment>
+      <Hero />
+      <Mei />
+      <Solutions />
+      <ThinkInCompany />
+      <StepByStep />
+      <ChangingTheMeter />
+      <Plans />
+    </Fragment>
   )
 }
