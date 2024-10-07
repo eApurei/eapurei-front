@@ -31,12 +31,42 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      keyframes: {
+        'accordion-down': {
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+        },
+        'accordion-up': {
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
     },
     screens: {
-      lg_1: { max: '1120px' },
-      lg_2: { max: '960px' },
-      md_1: { max: '768px' },
-      md_2: { max: '280px' },
+      lg_1: {
+        max: '1120px',
+      },
+      lg_2: {
+        max: '960px',
+      },
+      md_1: {
+        max: '768px',
+      },
+      md_2: {
+        max: '280px',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

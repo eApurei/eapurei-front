@@ -3,7 +3,8 @@
 import { Minus, Plus } from '@phosphor-icons/react'
 import { useState } from 'react'
 
-import { SelectItemsProps } from '@/@types'
+import { HowMuchWouldYouPayProps, SelectItemsProps } from '@/@types'
+import ButtonComponent from '@/components/atoms/ButtonComponent'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
@@ -73,12 +74,12 @@ const selectItemsActivity: SelectItemsProps[] = [
 
 const selectItemsInvoice: SelectItemsProps[] = [
   {
-    label: 'Sozinho através da plataforma',
-    value: 'Sozinho através da plataforma',
+    label: 'Sim, eu gostaria.',
+    value: 'Sim, eu gostaria.',
   },
   {
-    label: 'Com ajuda de um assessor, pagando um valor adicional',
-    value: 'Com ajuda de um assessor, pagando um valor adicional',
+    label: 'Não',
+    value: 'Não',
   },
 ]
 
@@ -92,8 +93,35 @@ const selectItemsService: SelectItemsProps[] = [
     value: 'Via chat, e-mail e whatsapp',
   },
   {
-    label: 'Via chat, e-mail, whatsapp e telefone',
-    value: 'Via chat, e-mail, whatsapp e telefone',
+    label: 'Via chat, e-mail, whatsapp, telefone e vídeo chamada',
+    value: 'Via chat, e-mail, whatsapp, telefone e vídeo chamada',
+  },
+]
+
+const howMuchWouldYouPay: HowMuchWouldYouPayProps[] = [
+  {
+    label: 'Honorários contábeis de abertura',
+    price: 'R$ 1.500',
+  },
+  {
+    label: 'Taxas de abertura',
+    price: 'R$ 1.500',
+  },
+  {
+    label: 'Mensalidade do contador',
+    price: 'R$ 331',
+  },
+  {
+    label: 'Certificado digital',
+    price: 'R$ 200',
+  },
+  {
+    label: 'Importação e conciliação de extrato bancário',
+    price: 'R$1.302',
+  },
+  {
+    label: 'Total na concorrência:',
+    price: 'R$ 7.586',
   },
 ]
 
@@ -109,7 +137,7 @@ export default function PlansSelect() {
   const handleTabClick = (tab: string) => setActiveTab(tab)
 
   return (
-    <div className="flex w-full items-center justify-center pb-8 dark:bg-grey-100">
+    <div className="flex w-full items-start justify-center gap-16 pb-8 dark:bg-grey-100">
       <Card
         className={`w-[468px] ${roboto.className} rounded-none border-secondary-50 bg-secondary-50`}
       >
@@ -138,10 +166,13 @@ export default function PlansSelect() {
               </Label>
               <Select>
                 <SelectTrigger
-                  className="w-full bg-white focus-visible:ring-primary-100"
+                  className="w-full bg-white focus-visible:ring-primary-100 dark:bg-black dark:focus-visible:ring-primary-100"
                   id="activity"
                 >
-                  <SelectValue placeholder="Selecione a sua área de atuação" />
+                  <SelectValue
+                    placeholder="Selecione a sua área de atuação"
+                    className=""
+                  />
                 </SelectTrigger>
                 <SelectContent position="popper" className="max-w-full">
                   {selectItemsActivity.map((item, index) => {
@@ -163,12 +194,12 @@ export default function PlansSelect() {
               2. Quantos sócios ou funcionários sua empresa terá?
               <Label
                 htmlFor="company"
-                className="flex w-full items-center justify-center gap-8 rounded-md bg-white py-1"
+                className="flex w-full items-center justify-center gap-8 whitespace-nowrap rounded-md border border-zinc-200 border-opacity-15 bg-white py-1 dark:bg-black dark:text-white"
               >
                 <Button
                   variant={'outline'}
                   onClick={handleCountDecrease}
-                  className="h-7 w-7 border-hidden bg-transparent p-0 text-black hover:bg-primary-100 hover:text-white focus-visible:ring-primary-50"
+                  className="h-7 w-7 border-hidden bg-transparent p-0 text-black hover:bg-primary-100 hover:text-white focus-visible:ring-primary-50 dark:text-white"
                 >
                   <Minus weight="bold" size={14} />
                 </Button>
@@ -178,7 +209,7 @@ export default function PlansSelect() {
                 <Button
                   variant={'outline'}
                   onClick={handleCountIncrease}
-                  className="h-7 w-7 border-hidden bg-transparent p-0 text-black hover:bg-primary-100 hover:text-white focus-visible:ring-primary-50"
+                  className="h-7 w-7 border-hidden bg-transparent p-0 text-black hover:bg-primary-100 hover:text-white focus-visible:ring-primary-50 dark:text-white"
                 >
                   <Plus weight="bold" size={14} />
                 </Button>
@@ -187,12 +218,12 @@ export default function PlansSelect() {
 
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="invoice" className="font-bold">
-                3. Como você prefere cuidar da rotina da sua empresa, como
-                emissão de notas etc?
+                3. Você gostaria de uma consultoria contábil ilimitada por vídeo
+                personalizada para o segmento da sua empresa?
               </Label>
               <Select>
                 <SelectTrigger
-                  className="w-full bg-white focus-visible:ring-primary-100"
+                  className="w-full bg-white focus-visible:ring-primary-100 dark:bg-black dark:focus-visible:ring-primary-100"
                   id="invoice"
                 >
                   <SelectValue placeholder="Selecione uma das opções" />
@@ -219,7 +250,7 @@ export default function PlansSelect() {
               </Label>
               <Select>
                 <SelectTrigger
-                  className="w-full bg-white focus-visible:ring-primary-100"
+                  className="w-full bg-white focus-visible:ring-primary-100 dark:bg-black dark:focus-visible:ring-primary-100"
                   id="service"
                 >
                   <SelectValue placeholder="Selecione uma das opções" />
@@ -242,6 +273,121 @@ export default function PlansSelect() {
           </div>
         </CardContent>
       </Card>
+
+      <div className="hidden w-[420px] flex-col items-center justify-center gap-8">
+        <section
+          className={`w-[420px] ${roboto.className} flex flex-col items-center justify-center rounded-none border-primary-25 bg-primary-25 px-4 py-6`}
+        >
+          <h1 className="text-xl">Indicamos o Pacote</h1>
+
+          <p className="text-2xl font-bold uppercase text-secondary-100">
+            expert
+          </p>
+
+          <p>Sua mensalidade será a partir de:</p>
+
+          <span>
+            R$<span className="text-4xl font-bold">425</span>/mês
+          </span>
+
+          <ButtonComponent
+            label="contratar"
+            linkTo=""
+            style="bg-white !text-grey-100 border-white w-1/2 text-center mt-4"
+          />
+
+          <span className="flex w-full items-center justify-between py-4 font-semibold">
+            Com a eApurei você economiza até{' '}
+            <span className="text-lg text-secondary-100">
+              R$3.200<span className="text-sm text-black">/ao ano</span>
+            </span>
+          </span>
+
+          <p className="w-full py-2">
+            Confira o quanto você pagaria sem a eApurei:
+          </p>
+
+          {howMuchWouldYouPay.map((item, index) => {
+            return (
+              <span
+                key={index}
+                className="flex w-full items-center justify-between text-sm font-normal"
+              >
+                {item.label} <span className="text-sm">{item.price}</span>
+              </span>
+            )
+          })}
+        </section>
+
+        <p className="text-center text-sm text-grey-100 dark:text-white">
+          *Os valores acima correspondem ao preço médio praticado no Brasil. O
+          preço da mensalidade da eApurei, mencionado acima, é válido para
+          empresas do Simples Nacional.
+        </p>
+      </div>
+
+      <div className="hidden w-[420px] flex-col items-center justify-center gap-8">
+        <section
+          className={`w-[420px] ${roboto.className} flex flex-col items-center justify-center rounded-none border-primary-25 bg-primary-25 px-4 py-6`}
+        >
+          <h1 className="text-xl">Indicamos o Pacote</h1>
+
+          <p className="text-2xl font-bold uppercase text-secondary-100">
+            padrão
+          </p>
+
+          <p>Sua mensalidade será a partir de:</p>
+
+          <span>
+            R$<span className="text-4xl font-bold">239</span>/mês
+          </span>
+
+          <ButtonComponent
+            label="contratar"
+            linkTo=""
+            style="bg-white !text-grey-100 border-white w-1/2 text-center mt-4"
+          />
+
+          <span className="flex w-full items-center justify-between py-4 font-semibold">
+            Com a eApurei você economiza até{' '}
+            <span className="text-lg text-secondary-100">
+              R$4.000<span className="text-sm text-black">/ao ano</span>
+            </span>
+          </span>
+
+          <p className="w-full py-2">
+            Confira o quanto você pagaria sem a eApurei:
+          </p>
+
+          {howMuchWouldYouPay
+            .filter(
+              (item) =>
+                item.label !== 'Importação e conciliação de extrato bancário',
+            )
+
+            .map((item, index) => {
+              return (
+                <span
+                  key={index}
+                  className="flex w-full items-center justify-between text-sm font-normal"
+                >
+                  {item.label}{' '}
+                  <span className="text-sm">
+                    {item.label === 'Total na concorrência:'
+                      ? 'R$ 6.284'
+                      : item.price}
+                  </span>
+                </span>
+              )
+            })}
+        </section>
+
+        <p className="text-center text-sm text-grey-100 dark:text-white">
+          *Os valores acima correspondem ao preço médio praticado no Brasil. O
+          preço da mensalidade da eApurei, mencionado acima, é válido para
+          empresas do Simples Nacional.
+        </p>
+      </div>
     </div>
   )
 }

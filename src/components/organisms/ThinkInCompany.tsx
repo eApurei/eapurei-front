@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function ThinkInCompany() {
   return (
-    <section className="dark:bg-dark-300 flex w-full items-center justify-between bg-tertiary-100 px-8 py-4">
+    <section className="flex w-full items-center justify-between bg-tertiary-100 px-8 py-4 dark:bg-dark-300">
       <div className="flex flex-1 flex-col items-start justify-center text-primary-100">
         <h1 className="text-4xl font-bold lg_1:text-3xl lg_2:text-2xl">
           Pensando em abrir uma empresa?

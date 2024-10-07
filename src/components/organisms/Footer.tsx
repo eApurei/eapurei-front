@@ -39,7 +39,7 @@ const menuItems: IMenuItemsProps[] = [
 export default function Footer() {
   return (
     <>
-      <footer className="dark:bg-dark-100 flex w-full flex-col items-center justify-center">
+      <footer className="flex w-full flex-col items-center justify-center dark:bg-dark-100">
         <Separator
           orientation="horizontal"
           className="w-full bg-primary-100 opacity-50 dark:bg-white"

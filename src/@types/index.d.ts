@@ -23,3 +23,25 @@ export interface SelectItemsProps {
   label: string
   value: string
 }
+
+export interface SocialProofCardType {
+  name: string
+  image: string
+  description: string
+  area: string
+  plan: string
+}
+
+export interface SocialProofCardProps {
+  item: SocialProofCardType
+}
+
+export interface AccordionItemsProps {
+  label: string
+  value: string
+}
+
+export interface HowMuchWouldYouPayProps {
+  label: string
+  price: string
+}

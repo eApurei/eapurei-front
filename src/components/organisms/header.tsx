@@ -66,7 +66,7 @@ export function Header() {
 
   return (
     <>
-      <header className="dark:bg-dark-100 flex items-center justify-between px-8 py-3 lg_2:px-2">
+      <header className="flex items-center justify-between px-8 py-3 dark:bg-dark-100 lg_2:px-2">
         <Link href={'/'} className="duration-300 hover:opacity-80">
           <Image
             alt="eApurei Logo"

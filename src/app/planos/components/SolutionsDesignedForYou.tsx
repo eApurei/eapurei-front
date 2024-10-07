@@ -10,15 +10,15 @@ import {
 
 export default function SolutionsDesignedForYou() {
   return (
-    <main className="flex w-full flex-col items-center justify-center gap-8 px-8 py-12 dark:bg-grey-100">
+    <main className="flex w-full flex-col items-center justify-center gap-8 px-8 py-16 dark:bg-grey-100">
       <h1 className="text-4xl font-bold text-grey-100 dark:text-white lg_1:text-3xl">
         Soluções pensadas em você e na sua empresa
       </h1>
 
-      <section className="grid w-[80%] grid-cols-3 grid-rows-2 flex-wrap items-start justify-start gap-8">
-        <div className="flex w-[275px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
+      <section className="grid w-[80%] grid-cols-3 grid-rows-2 flex-wrap items-start justify-start gap-8 py-8">
+        <div className="flex w-[295px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
           <div className="flex w-full items-center justify-between gap-2">
-            <ArrowsClockwise size={24} weight="bold" />
+            <ArrowsClockwise size={40} weight="fill" />
             <h3 className="text-lg font-bold">Agilidade em todo processo</h3>
           </div>
           <span>
@@ -27,9 +27,9 @@ export default function SolutionsDesignedForYou() {
           </span>
         </div>
 
-        <div className="flex w-[285px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
+        <div className="flex w-[305px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
           <div className="flex w-full items-center justify-between gap-2">
-            <Handshake size={24} weight="bold" />
+            <Handshake size={40} weight="fill" />
             <h3 className="text-lg font-bold">Suporte na abertura do CNPJ</h3>
           </div>
           <span>
@@ -38,9 +38,9 @@ export default function SolutionsDesignedForYou() {
           </span>
         </div>
 
-        <div className="flex w-[335px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
+        <div className="flex w-[355px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
           <div className="flex w-full items-center justify-between gap-2">
-            <Chats size={24} weight="bold" />
+            <Chats size={40} weight="fill" />
             <h3 className="text-lg font-bold">
               Atendimento em horário estendido
             </h3>
@@ -51,9 +51,9 @@ export default function SolutionsDesignedForYou() {
           </span>
         </div>
 
-        <div className="flex w-[245px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
+        <div className="flex w-[265px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
           <div className="flex w-full items-center justify-between gap-2">
-            <ListChecks size={24} weight="bold" />
+            <ListChecks size={40} weight="fill" />
             <h3 className="text-lg font-bold">Várias opções de planos</h3>
           </div>
           <span>
@@ -62,9 +62,9 @@ export default function SolutionsDesignedForYou() {
           </span>
         </div>
 
-        <div className="flex w-[280px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
+        <div className="flex w-[300px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
           <div className="flex w-full items-center justify-between gap-2">
-            <Headset size={24} weight="bold" />
+            <Headset size={40} weight="fill" />
             <h3 className="text-lg font-bold">Assessoria no seu segmento</h3>
           </div>
           <span>

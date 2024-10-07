@@ -11,7 +11,7 @@ export default function AdditionalInformation() {
 
       <CaretDoubleDown size={32} className="animate-bounce text-primary-100" />
 
-      <section className="bg-primary-25 flex flex-col items-center justify-center gap-6 rounded-sm p-4">
+      <section className="flex flex-col items-center justify-center gap-6 rounded-sm bg-primary-25 p-4">
         <div className="flex w-full flex-col items-start justify-center gap-2">
           <h1 className="text-xl font-bold">
             Condições especiais para empresas de serviço
