@@ -63,7 +63,7 @@ const accordionItems: AccordionItemsProps[] = [
 
 export default function FAQ() {
   return (
-    <main className="flex flex-col items-center justify-center gap-6 px-8 pb-8 pt-4 dark:bg-grey-100">
+    <main className="flex flex-col items-center justify-center gap-6 px-8 pb-8 pt-20 dark:bg-grey-100">
       <h1 className="text-4xl font-bold text-grey-100 dark:text-white">
         Perguntas Frequentes
       </h1>

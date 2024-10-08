@@ -13,6 +13,11 @@
   box-shadow: 0 0 0 2px #6cc2b6;
 }
 
+:root {
+  --swiper-pagination-color: #009681;
+  --swiper-pagination-bullet-inactive-color: #7c6992;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;

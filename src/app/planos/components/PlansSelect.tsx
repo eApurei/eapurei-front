@@ -139,19 +139,19 @@ export default function PlansSelect() {
   return (
     <div className="flex w-full items-start justify-center gap-16 pb-8 dark:bg-grey-100">
       <Card
-        className={`w-[468px] ${roboto.className} rounded-none border-secondary-50 bg-secondary-50`}
+        className={`w-[468px] ${roboto.className} rounded-md border-secondary-50 bg-secondary-50`}
       >
         <CardHeader>
           <ul className="mb-6 flex w-full select-none items-center justify-between border-b border-b-primary-100">
             <li
               onClick={() => handleTabClick('Vou abrir empresa')}
-              className={`${activeTab === 'Vou abrir empresa' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center px-6 text-center text-lg duration-300 hover:opacity-70`}
+              className={`${activeTab === 'Vou abrir empresa' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center rounded-t-md px-6 text-center text-lg duration-300 hover:opacity-70`}
             >
               Vou abrir empresa
             </li>
             <li
               onClick={() => handleTabClick('Vou trocar de contador')}
-              className={`${activeTab === 'Vou trocar de contador' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center px-6 text-center text-lg duration-300 hover:opacity-70`}
+              className={`${activeTab === 'Vou trocar de contador' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center rounded-t-md px-6 text-center text-lg duration-300 hover:opacity-70`}
             >
               Vou trocar de contador
             </li>

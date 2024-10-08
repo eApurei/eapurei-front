@@ -10,12 +10,12 @@ import {
 
 export default function SolutionsDesignedForYou() {
   return (
-    <main className="flex w-full flex-col items-center justify-center gap-8 px-8 py-16 dark:bg-grey-100">
+    <main className="flex w-full flex-col items-center justify-center gap-8 px-8 pb-16 pt-24 dark:bg-grey-100">
       <h1 className="text-4xl font-bold text-grey-100 dark:text-white lg_1:text-3xl">
         Soluções pensadas em você e na sua empresa
       </h1>
 
-      <section className="grid w-[80%] grid-cols-3 grid-rows-2 flex-wrap items-start justify-start gap-8 py-8">
+      <section className="grid w-full grid-cols-3 grid-rows-2 flex-wrap items-start justify-start gap-8 py-8">
         <div className="flex w-[295px] flex-col items-center justify-center gap-1 text-grey-100 dark:text-white">
           <div className="flex w-full items-center justify-between gap-2">
             <ArrowsClockwise size={40} weight="fill" />

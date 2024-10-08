@@ -1,3 +1,11 @@
+'use client'
+
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+import { Autoplay, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 import { SocialProofCardType } from '@/@types'
 
 import SocialProofCard from './SocialProofCard'
@@ -38,11 +46,31 @@ export default function SocialProof() {
         <span className="text-primary-100">Apurei</span>
       </h1>
 
-      <div className="flex items-center justify-center gap-8 py-8">
-        {socialProofCard.map((item, index) => {
-          return <SocialProofCard key={index} item={item} />
-        })}
-      </div>
+      <Swiper
+        pagination={{
+          dynamicBullets: true,
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination, Autoplay]}
+        spaceBetween={30}
+        loop={true}
+        slidesPerView={2}
+        autoHeight={true}
+        className="w-[720px]"
+      >
+        <div className="flex items-center justify-center py-8">
+          {socialProofCard.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <SocialProofCard item={item} />
+              </SwiperSlide>
+            )
+          })}
+        </div>
+      </Swiper>
     </main>
   )
 }

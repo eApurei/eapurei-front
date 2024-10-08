@@ -71,7 +71,7 @@ export default function Solutions() {
           {solutions.map(({ icon: Icon, label, weight }, index) => (
             <li
               key={index}
-              className={`${activeIndex === index ? 'bg-secondary-100 text-white dark:bg-white dark:text-secondary-150' : ''} flex cursor-pointer items-center justify-center gap-2 rounded-md border border-secondary-100 px-4 py-2 font-bold text-secondary-100 duration-300 hover:bg-secondary-100 hover:text-white dark:border-white dark:text-white hover:dark:bg-white hover:dark:text-secondary-100 lg_1:px-2 lg_1:text-sm lg_2:py-1 lg_2:text-xs`}
+              className={`${activeIndex === index ? 'bg-secondary-100 text-white dark:bg-white dark:text-secondary-100' : ''} flex cursor-pointer items-center justify-center gap-2 rounded-md border border-secondary-100 px-4 py-2 font-bold text-secondary-100 duration-300 hover:bg-secondary-100 hover:text-white dark:border-white dark:text-white hover:dark:bg-white hover:dark:text-secondary-100 lg_1:px-2 lg_1:text-sm lg_2:py-1 lg_2:text-xs`}
               onClick={() => setActiveIndex(index)}
             >
               <Icon weight={weight} size={24} className="lg_2:w-4" />
