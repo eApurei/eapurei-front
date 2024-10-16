@@ -5,7 +5,7 @@ import { roboto } from '@/lib/fonts'
 
 export default function AdditionalInformation() {
   return (
-    <main className="flex flex-col items-center justify-center gap-6 px-8 py-4 dark:bg-grey-100">
+    <main className="flex flex-col items-center justify-center gap-6 px-8 pb-4 dark:bg-grey-100">
       <Dialog>
         <DialogTrigger asChild>
           <div className="cursor-pointer select-none rounded-md bg-primary-100 px-8 py-2 text-lg font-bold text-white duration-300 hover:scale-105 hover:opacity-80">

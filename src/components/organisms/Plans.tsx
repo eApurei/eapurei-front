@@ -23,7 +23,7 @@ export default function Plans() {
   }
 
   return (
-    <main className="flex w-full flex-col items-center justify-center gap-8 bg-white p-8 dark:bg-grey-100">
+    <main className="flex w-full flex-col items-center justify-center gap-8 bg-white px-8 pt-8 dark:bg-grey-100">
       <h1 className="text-4xl font-bold text-grey-100 dark:text-white lg_1:text-3xl">
         Confira nossos planos
       </h1>

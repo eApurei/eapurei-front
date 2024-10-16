@@ -137,21 +137,21 @@ export default function PlansSelect() {
   const handleTabClick = (tab: string) => setActiveTab(tab)
 
   return (
-    <div className="flex w-full items-start justify-center gap-16 pb-8 dark:bg-grey-100">
+    <div className="flex w-full items-start justify-center gap-16 pb-20 dark:bg-grey-100">
       <Card
-        className={`w-[468px] ${roboto.className} rounded-none border-secondary-50 bg-secondary-50`}
+        className={`w-[468px] ${roboto.className} rounded-md border-secondary-50 bg-secondary-50`}
       >
         <CardHeader>
           <ul className="mb-6 flex w-full select-none items-center justify-between border-b border-b-primary-100">
             <li
               onClick={() => handleTabClick('Vou abrir empresa')}
-              className={`${activeTab === 'Vou abrir empresa' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center px-6 text-center text-lg duration-300 hover:opacity-70`}
+              className={`${activeTab === 'Vou abrir empresa' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center rounded-t-md px-6 text-center text-lg duration-300 hover:bg-primary-100 hover:text-white`}
             >
               Vou abrir empresa
             </li>
             <li
               onClick={() => handleTabClick('Vou trocar de contador')}
-              className={`${activeTab === 'Vou trocar de contador' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center px-6 text-center text-lg duration-300 hover:opacity-70`}
+              className={`${activeTab === 'Vou trocar de contador' && 'bg-primary-100 text-white'} flex h-20 w-1/2 cursor-pointer items-center justify-center rounded-t-md px-6 text-center text-lg duration-300 hover:bg-primary-100 hover:text-white`}
             >
               Vou trocar de contador
             </li>
@@ -276,7 +276,7 @@ export default function PlansSelect() {
 
       <div className="hidden w-[420px] flex-col items-center justify-center gap-8">
         <section
-          className={`w-[420px] ${roboto.className} flex flex-col items-center justify-center rounded-none border-primary-25 bg-primary-25 px-4 py-6`}
+          className={`w-[420px] ${roboto.className} flex flex-col items-center justify-center rounded-md border-primary-25 bg-primary-25 px-4 py-6`}
         >
           <h1 className="text-xl">Indicamos o Pacote</h1>
 
@@ -328,7 +328,7 @@ export default function PlansSelect() {
 
       <div className="hidden w-[420px] flex-col items-center justify-center gap-8">
         <section
-          className={`w-[420px] ${roboto.className} flex flex-col items-center justify-center rounded-none border-primary-25 bg-primary-25 px-4 py-6`}
+          className={`w-[420px] ${roboto.className} flex flex-col items-center justify-center rounded-md border-primary-25 bg-primary-25 px-4 py-6`}
         >
           <h1 className="text-xl">Indicamos o Pacote</h1>
 

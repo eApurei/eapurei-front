@@ -33,7 +33,7 @@ const benefits: BenefitsProps[] = [
 
 export default function Hero() {
   return (
-    <main className="flex w-full flex-col items-center justify-center px-8 py-12 dark:bg-grey-100 lg_2:px-2">
+    <main className="flex w-full flex-col items-center justify-center px-8 pb-12 pt-20 dark:bg-grey-100 lg_2:px-2">
       <h1 className="text-3xl font-bold dark:text-white">
         Confira alguns dos nossos benefícios:
       </h1>
@@ -54,7 +54,7 @@ export default function Hero() {
         </ul>
       </div>
 
-      <div className="mt-12 flex flex-col items-center justify-center gap-4 px-4 pt-8">
+      <div className="mt-28 flex flex-col items-center justify-center gap-4 px-4">
         <h1 className="text-3xl font-bold uppercase text-primary-100">
           Confira o quanto você economiza com a eApurei
         </h1>
