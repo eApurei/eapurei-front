@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --swiper-navigation-color: #009681;
+}
+
 :focus {
   outline: 0;
   box-shadow: 0 0 0 2px #6cc2b6;

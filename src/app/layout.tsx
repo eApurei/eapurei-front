@@ -1,4 +1,6 @@
 import './globals.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
 
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'

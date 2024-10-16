@@ -1,6 +1,19 @@
-import { SocialProofCardType } from '@/@types'
+'use client'
 
-import SocialProofCard from './SocialProofCard'
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+import { Autoplay, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import { SocialProofCardType } from '@/@types'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 
 const socialProofCard: SocialProofCardType[] = [
   {
@@ -27,6 +40,46 @@ const socialProofCard: SocialProofCardType[] = [
     area: 'Engenheiro Químico',
     plan: 'Cliente do Pacote Expert',
   },
+  {
+    name: 'XXXXesa Bocchese',
+    image: '',
+    description:
+      'Eu abri o meu CNPJ com total apoio da eApurei. Eu posso dizer que eu estou bastante satisfeito com toda a orientação que eu tenho recebido até agora, inclusive sobre a classificação fiscal dos serviços que são prestados.',
+    area: 'Engenheiro Químico',
+    plan: 'Cliente do Pacote Expert',
+  },
+  {
+    name: 'AAAAAesa Bocchese',
+    image: '',
+    description:
+      'Eu abri o meu CNPJ com total apoio da eApurei. Eu posso dizer que eu estou bastante satisfeito com toda a orientação que eu tenho recebido até agora, inclusive sobre a classificação fiscal dos serviços que são prestados.',
+    area: 'Engenheiro Químico',
+    plan: 'Cliente do Pacote Expert',
+  },
+  {
+    name: 'SSSSSSAesa Bocchese',
+    image: '',
+    description:
+      'Eu abri o meu CNPJ com total apoio da eApurei. Eu posso dizer que eu estou bastante satisfeito com toda a orientação que eu tenho recebido até agora, inclusive sobre a classificação fiscal dos serviços que são prestados.',
+    area: 'Engenheiro Químico',
+    plan: 'Cliente do Pacote Expert',
+  },
+  {
+    name: 'QQQQQQQQAesa Bocchese',
+    image: '',
+    description:
+      'Eu abri o meu CNPJ com total apoio da eApurei. Eu posso dizer que eu estou bastante satisfeito com toda a orientação que eu tenho recebido até agora, inclusive sobre a classificação fiscal dos serviços que são prestados.',
+    area: 'Engenheiro Químico',
+    plan: 'Cliente do Pacote Expert',
+  },
+  {
+    name: 'EEEEEEEEEsa Bocchese',
+    image: '',
+    description:
+      'Eu abri o meu CNPJ com total apoio da eApurei. Eu posso dizer que eu estou bastante satisfeito com toda a orientação que eu tenho recebido até agora, inclusive sobre a classificação fiscal dos serviços que são prestados.',
+    area: 'Engenheiro Químico',
+    plan: 'Cliente do Pacote Expert',
+  },
 ]
 
 export default function SocialProof() {
@@ -38,11 +91,41 @@ export default function SocialProof() {
         <span className="text-primary-100">Apurei</span>
       </h1>
 
-      <div className="flex items-center justify-center gap-8 py-8">
+      <Swiper
+        navigation={true}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Autoplay]}
+        slidesPerView={3}
+        className="mySwiper flex w-full items-center justify-center"
+      >
         {socialProofCard.map((item, index) => {
-          return <SocialProofCard key={index} item={item} />
+          return (
+            <SwiperSlide key={index}>
+              <Card className={`h-[340px] w-[340px] p-4`}>
+                <CardHeader className="flex flex-col items-center justify-center">
+                  <div className="h-16 w-16 rounded-full bg-primary-100"></div>
+                  <CardTitle className="text-primary-100">
+                    {item.name}
+                  </CardTitle>
+                  <CardDescription>{item.area}</CardDescription>
+                  <CardDescription>{item.plan}</CardDescription>
+                </CardHeader>
+                <CardContent className="mt-4 pb-0">
+                  <div className="grid w-full items-center gap-4 text-sm">
+                    <div className="flex flex-col">
+                      <p className="text-center">{item.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </SwiperSlide>
+          )
         })}
-      </div>
+      </Swiper>
     </main>
   )
 }

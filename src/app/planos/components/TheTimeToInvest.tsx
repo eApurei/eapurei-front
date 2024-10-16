@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 import ButtonComponent from '@/components/atoms/ButtonComponent'
 
 export default function TheTimeToInvest() {
   return (
-    <section className="flex w-full items-center justify-between px-8 py-12 dark:bg-grey-100">
-      <div className="flex w-[65%] flex-col items-start justify-center gap-4">
+    <section className="flex w-full items-center justify-between px-8 pb-12 dark:bg-grey-100">
+      <div className="flex w-[55%] flex-col items-start justify-center gap-4">
         <h1 className="text-4xl font-bold uppercase text-grey-100 dark:text-white">
           A hora de investir no sucesso da sua empresa é{' '}
           <span className="text-primary-100">agora!</span>
@@ -17,7 +19,15 @@ export default function TheTimeToInvest() {
           />
         </div>
       </div>
-      <div className="flex w-[35%] items-center justify-center">oi</div>
+      <div className="flex w-[45%] items-center justify-center">
+        <Image
+          alt="Image Woman eApurei"
+          src={'/finallySessionPlans.png'}
+          width={1080}
+          height={1080}
+          className="w-[30rem]"
+        />
+      </div>
     </section>
   )
 }
