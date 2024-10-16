@@ -4,7 +4,6 @@ import {
   FacebookLogo,
   InstagramLogo,
   LinkedinLogo,
-  YoutubeLogo,
 } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -39,12 +38,12 @@ const menuItems: IMenuItemsProps[] = [
 export default function Footer() {
   return (
     <>
-      <footer className="flex w-full flex-col items-center justify-center dark:bg-dark-100">
+      <footer className="flex h-72 w-full flex-col items-center justify-center dark:bg-dark-100">
         <Separator
           orientation="horizontal"
           className="w-full bg-primary-100 opacity-50 dark:bg-white"
         />
-        <section className="flex w-full items-center justify-center gap-8 p-8">
+        <section className="flex h-full w-full items-center justify-center gap-12 p-8">
           <Link href={'/'}>
             <Image
               alt="eApurei Logo Image"
@@ -58,7 +57,7 @@ export default function Footer() {
 
           <Separator
             orientation="vertical"
-            className="h-20 bg-primary-100 opacity-60 dark:bg-white"
+            className="h-32 bg-primary-100 opacity-60 dark:bg-white"
           />
 
           <div className="flex flex-col items-center justify-center gap-4">
@@ -68,7 +67,7 @@ export default function Footer() {
 
             <div className="flex items-center justify-center gap-4">
               <Link
-                href="https://www.instagram.com/eapurei_contabilidade/"
+                href="https://www.instagram.com/e.apurei/"
                 target="_blank"
                 className="text-primary-500 hover:text-primary-400"
               >
@@ -80,7 +79,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://www.instagram.com/eapurei_contabilidade/"
+                href="https://www.linkedin.com/company/eapurei-contabilidade"
                 target="_blank"
                 className="text-primary-500 hover:text-primary-400"
               >
@@ -92,23 +91,11 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://www.instagram.com/eapurei_contabilidade/"
+                href="https://www.facebook.com/profile.php?id=61562306924992"
                 target="_blank"
                 className="text-primary-500 hover:text-primary-400"
               >
                 <FacebookLogo
-                  size={28}
-                  weight={'fill'}
-                  className="text-primary-100 duration-300 hover:scale-105 hover:opacity-70 lg_2:w-5"
-                />
-              </Link>
-
-              <Link
-                href="https://www.instagram.com/eapurei_contabilidade/"
-                target="_blank"
-                className="text-primary-500 hover:text-primary-400"
-              >
-                <YoutubeLogo
                   size={28}
                   weight={'fill'}
                   className="text-primary-100 duration-300 hover:scale-105 hover:opacity-70 lg_2:w-5"
@@ -119,7 +106,7 @@ export default function Footer() {
 
           <Separator
             orientation="vertical"
-            className="h-20 bg-primary-100 opacity-60 dark:bg-white"
+            className="h-32 bg-primary-100 opacity-60 dark:bg-white"
           />
 
           <nav className="flex items-center justify-center">
