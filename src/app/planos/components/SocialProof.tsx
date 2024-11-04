@@ -105,7 +105,9 @@ export default function SocialProof() {
         {socialProofCard.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <Card className={`h-[340px] w-[340px] p-4`}>
+              <Card
+                className={`h-[340px] w-[340px] p-4 dark:border-dark-100 dark:bg-dark-100`}
+              >
                 <CardHeader className="flex flex-col items-center justify-center">
                   <div className="h-16 w-16 rounded-full bg-primary-100"></div>
                   <CardTitle className="text-primary-100">

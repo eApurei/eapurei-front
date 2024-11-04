@@ -1,12 +1,12 @@
 import { Fragment } from 'react'
 
-import ChangingTheMeter from '@/components/organisms/ChangingTheMeter'
-import Hero from '@/components/organisms/Hero'
-import Mei from '@/components/organisms/Mei'
-import Plans from '@/components/organisms/Plans'
-import Solutions from '@/components/organisms/Solutions'
-import StepByStep from '@/components/organisms/StepByStep'
-import ThinkInCompany from '@/components/organisms/ThinkInCompany'
+import ChangingTheMeter from '@/components/ChangingTheMeter'
+import Hero from '@/components/Hero'
+import Mei from '@/components/Mei'
+import Plans from '@/components/Plans'
+import Solutions from '@/components/Solutions'
+import StepByStep from '@/components/StepByStep'
+import ThinkInCompany from '@/components/ThinkInCompany'
 
 export default function Home() {
   return (

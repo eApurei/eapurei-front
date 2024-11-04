@@ -3,7 +3,7 @@
 import { Folders, SealCheck, VideoConference } from '@phosphor-icons/react'
 import Image from 'next/image'
 
-import Button from '../atoms/ButtonComponent'
+import Button from './ButtonComponent'
 
 export default function ChangingTheMeter() {
   return (

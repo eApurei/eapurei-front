@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 import { IMenuItemsProps } from '@/@types'
 
-import { Separator } from '../ui/separator'
+import { Separator } from './ui/separator'
 
 const menuItems: IMenuItemsProps[] = [
   {

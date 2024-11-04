@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import Plans from '@/components/organisms/Plans'
+import Plans from '@/components/Plans'
 
 import AdditionalInformation from './components/AdditionalInformation'
 import FAQ from './components/FAQ'

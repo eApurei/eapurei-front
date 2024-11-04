@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { IContentListProps } from '@/@types'
 
-import ButtonComponent from '../atoms/ButtonComponent'
+import ButtonComponent from './ButtonComponent'
 
 const contentList: IContentListProps[] = [
   {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import ButtonComponent from '../atoms/ButtonComponent'
+import ButtonComponent from './ButtonComponent'
 
 export default function Mei() {
   return (

@@ -45,3 +45,8 @@ export interface HowMuchWouldYouPayProps {
   label: string
   price: string
 }
+
+export interface ActivitiesContentProps {
+  label: string
+  activity: string
+}

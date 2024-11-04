@@ -4,7 +4,7 @@ import { Minus, Plus } from '@phosphor-icons/react'
 import { useState } from 'react'
 
 import { HowMuchWouldYouPayProps, SelectItemsProps } from '@/@types'
-import ButtonComponent from '@/components/atoms/ButtonComponent'
+import ButtonComponent from '@/components/ButtonComponent'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
@@ -139,7 +139,7 @@ export default function PlansSelect() {
   return (
     <div className="flex w-full items-start justify-center gap-16 pb-20 dark:bg-grey-100">
       <Card
-        className={`w-[468px] ${roboto.className} rounded-md border-secondary-50 bg-secondary-50`}
+        className={`w-[468px] ${roboto.className} rounded-md border-secondary-50 bg-secondary-50 dark:border-dark-100 dark:bg-dark-100`}
       >
         <CardHeader>
           <ul className="mb-6 flex w-full select-none items-center justify-between border-b border-b-primary-100">

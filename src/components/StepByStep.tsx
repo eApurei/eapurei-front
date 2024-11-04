@@ -19,8 +19,8 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
 
-import ButtonComponent from '../atoms/ButtonComponent'
-import { Button } from '../ui/button'
+import ButtonComponent from './ButtonComponent'
+import { Button } from './ui/button'
 
 export default function StepByStep() {
   const [collapse, setCollapse] = useState<boolean>(true)

@@ -1,13 +1,21 @@
 'use client'
 
-import { HandCoins, Moon, Sun, Users } from '@phosphor-icons/react'
+import { CaretDown, HandCoins, Moon, Sun, Users } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import { IMenuItemsProps } from '@/@types'
 
-import { Separator } from '../ui/separator'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu'
+import { Separator } from './ui/separator'
 
 const menuItems: IMenuItemsProps[] = [
   {
@@ -79,13 +87,46 @@ export function Header() {
         </Link>
 
         <nav className="flex items-center justify-center md_1:hidden">
-          <ul className="flex items-center justify-center gap-4 text-base font-bold text-primary-100 lg_1:text-sm lg_2:gap-2 lg_2:text-xs">
+          <ul className="flex items-center justify-center gap-4 text-sm font-bold text-primary-100 lg_2:gap-2 lg_2:text-xs">
             {menuItems.map((item, index) => {
               return (
                 <Link href={item.href} key={index}>
-                  <li className="cursor-pointer border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
-                    {item.label}
-                  </li>
+                  {item.label === 'Conteúdos' ? (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <li className="flex cursor-pointer items-center justify-center gap-1 border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
+                          {item.label}
+                          <CaretDown size={14} weight="bold" />
+                        </li>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="font-semibold text-dark-100">
+                        <DropdownMenuLabel className="text-base text-primary-100">
+                          Calculadoras:
+                        </DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem>
+                          <Link
+                            href={'/conteudos/calculadora-de-custo-para-cnpj'}
+                          >
+                            Calculadora de Custo para abrir CNPJ
+                          </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                          <Link href={'#'}>Calculadora PJ x CLT</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                          <Link href={'#'}>Calculadora de Fator R</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                          <Link href={'#'}>Calculadora de RPA Online</Link>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  ) : (
+                    <li className="cursor-pointer border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
+                      {item.label}
+                    </li>
+                  )}
                 </Link>
               )
             })}

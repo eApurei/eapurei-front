@@ -1,13 +1,14 @@
 import './globals.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'atropos/css'
 
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 
-import ButtonWhats from '@/components/atoms/ButtonWhats'
-import Footer from '@/components/organisms/Footer'
-import { Header } from '@/components/organisms/Header'
+import ButtonWhats from '@/components/ButtonWhats'
+import Footer from '@/components/Footer'
+import { Header } from '@/components/Header'
 
 const raleway = Raleway({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],

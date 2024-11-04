@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import ButtonComponent from '@/components/atoms/ButtonComponent'
+import ButtonComponent from '@/components/ButtonComponent'
 
 export default function TheTimeToInvest() {
   return (
