@@ -55,3 +55,7 @@ export interface SolutionsContentProps {
   title: string
   content: string
 }
+
+export interface BreadcrumbProps {
+  page: string
+}

@@ -1,3 +1,4 @@
+import { BreadcrumbProps } from '@/@types'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,7 +8,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 
-export default function BreadcrumbComponent() {
+export default function BreadcrumbComponent({ page }: BreadcrumbProps) {
   return (
     <main className="flex w-full items-center justify-between px-8 pb-8 pt-16 dark:bg-grey-100 lg_2:px-2">
       <Breadcrumb className="select-none text-secondary-150">
@@ -21,9 +22,7 @@ export default function BreadcrumbComponent() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>
-              Calculadora de Custo para Abrir CNPJ
-            </BreadcrumbPage>
+            <BreadcrumbPage>{page}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

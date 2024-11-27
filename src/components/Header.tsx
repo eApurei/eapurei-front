@@ -112,7 +112,9 @@ export function Header() {
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <Link href={'#'}>Calculadora PJ x CLT</Link>
+                          <Link href={'/conteudos/calculadora-clt-pj'}>
+                            Calculadora PJ x CLT
+                          </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                           <Link href={'#'}>Calculadora de Fator R</Link>

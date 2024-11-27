@@ -14,7 +14,7 @@ import WhyGetACNPJ from './components/WhyGetACNPJ'
 export default function Page() {
   return (
     <>
-      <BreadcrumbComponent />
+      <BreadcrumbComponent page="Calculadora de Custo para Abrir CNPJ" />
       <Hero />
       <WhyGetACNPJ />
       <OpenYourCompany />
