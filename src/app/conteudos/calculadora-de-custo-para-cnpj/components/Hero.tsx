@@ -1,3 +1,8 @@
+'use client'
+
+import { Info } from '@phosphor-icons/react'
+import { Tooltip } from 'react-tooltip'
+
 import { ActivitiesContentProps } from '@/@types'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -271,7 +276,9 @@ const activities: ActivitiesContentProps[] = [
 export default function Hero() {
   return (
     <>
-      <main className="flex w-full flex-col items-center justify-center gap-4 px-8 py-12 dark:bg-grey-100 lg_2:px-2">
+      <main
+        className={`${roboto.className} flex w-full flex-col items-center justify-center gap-4 p-12 dark:bg-grey-100 lg_2:px-2`}
+      >
         <h1 className="text-3xl font-bold text-primary-100">
           Calculadora Custo para tirar CNPJ
           <span className="text-secondary-150">.</span>
@@ -343,10 +350,27 @@ export default function Hero() {
             </div>
 
             <div className="flex w-full flex-col items-start justify-center gap-4">
-              <Label htmlFor="activity" className="font-bold dark:text-white">
+              <Tooltip id="billing" style={{ width: '20%' }} />
+              <Label
+                htmlFor="billing"
+                className="flex w-full items-center justify-between font-bold dark:text-white"
+              >
                 Quanto você prevê que sua empresa faturará mensalmente?
+                <Info
+                  size={20}
+                  weight="fill"
+                  data-tooltip-id="billing"
+                  data-tooltip-html="O percentual de imposto poderá aumentar de acordo com o valor do seu faturamento."
+                  data-tooltip-place="bottom-end"
+                  className="cursor-pointer text-grey-200 duration-300 hover:scale-110 lg_2:w-5"
+                />
               </Label>
-              <Input type="text" prefix="R$" />
+              <Input
+                type="text"
+                id="billing"
+                prefix="R$"
+                className="dark:bg-black dark:text-gray-400 dark:focus-visible:ring-primary-100"
+              />
             </div>
           </div>
         </section>

@@ -50,3 +50,8 @@ export interface ActivitiesContentProps {
   label: string
   activity: string
 }
+
+export interface SolutionsContentProps {
+  title: string
+  content: string
+}

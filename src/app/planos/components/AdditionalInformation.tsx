@@ -13,7 +13,7 @@ export default function AdditionalInformation() {
           </div>
         </DialogTrigger>
         <DialogContent
-          className={`${roboto.className} flex w-[55%] flex-col items-center justify-center gap-6 rounded-sm border-primary-25 bg-primary-25 p-4`}
+          className={`${roboto.className} flex w-[70%] flex-col items-center justify-center gap-6 rounded-sm border-primary-25 bg-primary-25 p-4`}
         >
           <div className="flex w-full flex-col items-start justify-center gap-2">
             <h1 className="text-xl font-bold">
