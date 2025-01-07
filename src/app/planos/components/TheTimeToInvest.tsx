@@ -1,20 +1,26 @@
 import Image from 'next/image'
 
+import { TheTimeToInvestProps } from '@/@types'
 import ButtonComponent from '@/components/ButtonComponent'
 
-export default function TheTimeToInvest() {
+export default function TheTimeToInvest({
+  title,
+  titleDifference,
+  firstButtonLabel,
+  secondButtonLabel,
+}: TheTimeToInvestProps) {
   return (
     <section className="flex w-full items-center justify-between px-8 pb-12 dark:bg-grey-100">
       <div className="flex w-[55%] flex-col items-start justify-center gap-4">
         <h1 className="text-4xl font-bold uppercase text-grey-100 dark:text-white">
-          A hora de investir no sucesso da sua empresa é{' '}
-          <span className="text-primary-100">agora!</span>
+          {title}
+          <span className="text-primary-100">{titleDifference}</span>
         </h1>
         <div className="flex items-center justify-center gap-4">
-          <ButtonComponent linkTo="" label="Abra sua empresa grátis agora" />
+          <ButtonComponent linkTo="" label={firstButtonLabel} />
           <ButtonComponent
             linkTo=""
-            label="Troque de contador"
+            label={secondButtonLabel}
             style="bg-secondary-100 border-secondary-100"
           />
         </div>

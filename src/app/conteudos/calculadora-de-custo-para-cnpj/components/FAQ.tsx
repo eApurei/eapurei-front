@@ -57,8 +57,12 @@ export default function FAQ() {
           {accordionItems.map((item, index) => {
             return (
               <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger>{item.label}</AccordionTrigger>
-                <AccordionContent>{item.value}</AccordionContent>
+                <AccordionTrigger className="text-base">
+                  {item.label}
+                </AccordionTrigger>
+                <AccordionContent className="text-base">
+                  {item.value}
+                </AccordionContent>
               </AccordionItem>
             )
           })}

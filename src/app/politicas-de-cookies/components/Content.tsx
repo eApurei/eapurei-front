@@ -288,10 +288,10 @@ export default function Content() {
           entrar em contato pelo seguinte meio:
         </p>
 
-        <p className="dark:text-white">&nbsp; &nbsp;• dpo@eapurei.com.br</p>
+        <p className="dark:text-white">&nbsp; &nbsp;• contato@eapurei.com.br</p>
 
         <p className="dark:text-white">
-          Esta Política de Cookies foi atualizada em 02/06/2021.
+          Esta Política de Cookies foi atualizada em 02/12/2024.
         </p>
       </div>
     </main>

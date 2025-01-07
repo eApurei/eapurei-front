@@ -59,3 +59,10 @@ export interface SolutionsContentProps {
 export interface BreadcrumbProps {
   page: string
 }
+
+interface TheTimeToInvestProps {
+  title: string
+  titleDifference?: string
+  firstButtonLabel: string
+  secondButtonLabel: string
+}

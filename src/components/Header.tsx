@@ -104,23 +104,31 @@ export function Header() {
                           Calculadoras:
                         </DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>
+                        <DropdownMenuItem asChild>
                           <Link
                             href={'/conteudos/calculadora-de-custo-para-cnpj'}
+                            className="cursor-pointer"
                           >
                             Calculadora de Custo para abrir CNPJ
                           </Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Link href={'/conteudos/calculadora-clt-pj'}>
+                        <DropdownMenuItem asChild>
+                          <Link
+                            href={'/conteudos/calculadora-clt-pj'}
+                            className="cursor-pointer"
+                          >
                             Calculadora PJ x CLT
                           </Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Link href={'#'}>Calculadora de Fator R</Link>
+                        <DropdownMenuItem asChild>
+                          <Link href={'#'} className="cursor-pointer">
+                            Calculadora de Fator R
+                          </Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Link href={'#'}>Calculadora de RPA Online</Link>
+                        <DropdownMenuItem asChild>
+                          <Link href={'#'} className="cursor-pointer">
+                            Calculadora de RPA Online
+                          </Link>
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>

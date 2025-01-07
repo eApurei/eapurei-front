@@ -20,7 +20,12 @@ export default function Page() {
       <SolutionsDesignedForYou />
       <SocialProof />
       <FAQ />
-      <TheTimeToInvest />
+      <TheTimeToInvest
+        title="A hora de investir no sucesso da sua empresa é"
+        titleDifference="agora!"
+        firstButtonLabel="abra sua empresa grátis agora"
+        secondButtonLabel="troque de contador"
+      />
     </Fragment>
   )
 }
