@@ -19,7 +19,7 @@ export default function AdditionalSolutions() {
     <section
       className={`${roboto.className} flex w-full flex-col items-center justify-center gap-4 px-8 dark:bg-grey-100 lg_2:px-2`}
     >
-      <div className="flex w-[97%] flex-col items-center justify-center rounded-md bg-slate-400 shadow-md">
+      <div className="flex w-[85%] flex-col items-center justify-center rounded-md bg-slate-400 shadow-md">
         <h3 className="w-full rounded-tl-md rounded-tr-md bg-gray-200 px-12 py-4 text-left">
           Soluções Adicionais
         </h3>

@@ -86,7 +86,7 @@ export default function Plans() {
                     size={24}
                     weight="fill"
                     data-tooltip-id="companyInfo"
-                    data-tooltip-html="Você paga apenas as taxas do governo e realiza os protocolos físicos.<br /><br />Indicamos o melhor regime tributário e atividades e você recebe a documentação de abertura via E-mail ou Correios dependendo da cidade.<br /><br />A abertura sem sair de casa está disponível para as cidades de Belo Horizonte, Curitiba, Florianópolis e São Paulo."
+                    data-tooltip-html={`Você paga apenas as taxas do governo e realiza os protocolos físicos.<br/><br/>Indicamos o melhor regime tributário e atividades e você recebe a documentação de abertura via E-mail ou Correios dependendo da cidade.<br /><br />A abertura sem sair de casa está disponível para as cidades de Belo Horizonte, Curitiba, Florianópolis e São Paulo.`}
                     data-tooltip-place="top-end"
                     className="cursor-pointer duration-300 hover:scale-110 lg_2:w-5"
                   />

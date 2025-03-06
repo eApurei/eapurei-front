@@ -17,203 +17,153 @@ import { roboto } from '@/lib/fonts'
 
 const cities = [
   {
-    label: 'Abadia de Goiás - GO',
     city: 'Abadia de Goiás - GO',
   },
   {
-    label: 'Abadia dos Dourados - MG',
     city: 'Abadia dos Dourados - MG',
   },
   {
-    label: 'Abadiânia - GO',
     city: 'Abadiânia - GO',
   },
   {
-    label: 'Abaetetuba - PA',
     city: 'Abaetetuba - PA',
   },
   {
-    label: 'Abaeté - MG',
     city: 'Abaeté - MG',
   },
   {
-    label: 'Abaiara - CE',
     city: 'Abaiara - CE',
   },
   {
-    label: 'Abaré - BA',
     city: 'Abaré - BA',
   },
   {
-    label: 'Abatiá - PR',
     city: 'Abatiá - PR',
   },
   {
-    label: 'Abaíra - BA',
     city: 'Abaíra - BA',
   },
   {
-    label: 'Abdon Batista - SC',
     city: 'Abdon Batista - SC',
   },
   {
-    label: 'Abel Figueiredo - PA',
     city: 'Abel Figueiredo - PA',
   },
   {
-    label: 'Abelardo Luz - SC',
     city: 'Abelardo Luz - SC',
   },
   {
-    label: 'Abre Campo - MG',
     city: 'Abre Campo - MG',
   },
   {
-    label: 'Abreu e Lima - PE',
     city: 'Abreu e Lima - PE',
   },
   {
-    label: 'Abreulândia - TO',
     city: 'Abreulândia - TO',
   },
   {
-    label: 'Acaiaca - MG',
     city: 'Acaiaca - MG',
   },
   {
-    label: 'Acajutiba - BA',
     city: 'Acajutiba - BA',
   },
   {
-    label: 'Acarape - CE',
     city: 'Acarape - CE',
   },
   {
-    label: 'Acaraú - CE',
     city: 'Acaraú - CE',
   },
   {
-    label: 'Acari - RN',
     city: 'Acari - RN',
   },
   {
-    label: 'Acará - PA',
     city: 'Acará - PA',
   },
   {
-    label: 'Acauã - PI',
     city: 'Acauã - PI',
   },
   {
-    label: 'Aceguá - RS',
     city: 'Aceguá - RS',
   },
   {
-    label: 'Acopiara - CE',
     city: 'Acopiara - CE',
   },
   {
-    label: 'Acorizal - MT',
     city: 'Acorizal - MT',
   },
   {
-    label: 'Acrelândia - AC',
     city: 'Acrelândia - AC',
   },
   {
-    label: 'Acreúna - GO',
     city: 'Acreúna - GO',
   },
   {
-    label: 'Adamantina - SP',
     city: 'Adamantina - SP',
   },
   {
-    label: 'Adelândia - GO',
     city: 'Adelândia - GO',
   },
   {
-    label: 'Adolfo - SP',
     city: 'Adolfo - SP',
   },
   {
-    label: 'Adrianópolis - PR',
     city: 'Adrianópolis - PR',
   },
   {
-    label: 'Adustina - BA',
     city: 'Adustina - BA',
   },
   {
-    label: 'Afogados da Ingazeira - PE',
     city: 'Afogados da Ingazeira - PE',
   },
   {
-    label: 'Afonso Bezerra - RN',
     city: 'Afonso Bezerra - RN',
   },
   {
-    label: 'Afonso Cláudio - ES',
     city: 'Afonso Cláudio - ES',
   },
   {
-    label: 'Afonso Cunha - MA',
     city: 'Afonso Cunha - MA',
   },
   {
-    label: 'Afrânio - PE',
     city: 'Afrânio - PE',
   },
   {
-    label: 'Afuá - PA',
     city: 'Afuá - PA',
   },
   {
-    label: 'Agrestina - PE',
     city: 'Agrestina - PE',
   },
   {
-    label: 'Agricolândia - PI',
     city: 'Agricolândia - PI',
   },
   {
-    label: 'Agrolândia - SC',
     city: 'Agrolândia - SC',
   },
   {
-    label: 'Agronômica - SC',
     city: 'Agronômica - SC',
   },
   {
-    label: 'Aguanil - MG',
     city: 'Aguanil - MG',
   },
   {
-    label: 'Aguaí - SP',
     city: 'Aguaí - SP',
   },
   {
-    label: 'Agudo - RS',
     city: 'Agudo - RS',
   },
   {
-    label: 'Agudos - SP',
     city: 'Agudos - SP',
   },
   {
-    label: 'Agudos do Sul - PR',
     city: 'Agudos do Sul - PR',
   },
   {
-    label: 'Aguiar - PB',
     city: 'Aguiar - PB',
   },
   {
-    label: 'Aguiarnópolis - TO',
     city: 'Aguiarnópolis - TO',
   },
   {
-    label: 'Aimorés - MG',
     city: 'Aimorés - MG',
   },
 ]
@@ -308,13 +258,13 @@ export default function Hero() {
                   />
                 </SelectTrigger>
                 <SelectContent position="popper" className="max-w-full">
-                  {cities.map((city, index) => (
+                  {cities.map((item, index) => (
                     <SelectItem
                       key={index}
-                      value={city.label}
+                      value={item.city}
                       className="font-medium focus:text-black focus-visible:bg-gray-100"
                     >
-                      {city.city}
+                      {item.city}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -330,10 +280,7 @@ export default function Hero() {
                   className="w-full bg-white text-gray-500 focus-visible:ring-primary-100 dark:bg-black dark:text-gray-400 dark:focus-visible:ring-primary-100"
                   id="activity"
                 >
-                  <SelectValue
-                    placeholder="Selecione uma atividade"
-                    className=""
-                  />
+                  <SelectValue placeholder="Selecione uma atividade" />
                 </SelectTrigger>
                 <SelectContent position="popper" className="max-w-full">
                   {activities.map((activity, index) => (

@@ -43,6 +43,7 @@ const menuItems: IMenuItemsProps[] = [
 export function Header() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
   const [isDropDown, setIsDropDown] = useState<boolean>(false)
+  const [isSticky, setIsSticky] = useState<boolean>(false)
 
   const handleDropDown = () => {
     setIsDropDown((prevState) => !prevState)
@@ -51,6 +52,22 @@ export function Header() {
   const handleClickInsideDropDown = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme')
@@ -74,7 +91,9 @@ export function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between px-8 py-3 dark:bg-dark-100 lg_2:px-2">
+      <header
+        className={`flex items-center justify-between bg-white px-8 py-3 dark:bg-dark-100 lg_2:px-2 ${isSticky ? 'fixed left-0 right-0 top-0 z-50 shadow-md' : ''}`}
+      >
         <Link href={'/'} className="duration-300 hover:opacity-80">
           <Image
             alt="eApurei Logo"
@@ -121,7 +140,10 @@ export function Header() {
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
-                          <Link href={'#'} className="cursor-pointer">
+                          <Link
+                            href={'/conteudos/calculadora-fator-r'}
+                            className="cursor-pointer"
+                          >
                             Calculadora de Fator R
                           </Link>
                         </DropdownMenuItem>

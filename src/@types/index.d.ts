@@ -64,5 +64,49 @@ interface TheTimeToInvestProps {
   title: string
   titleDifference?: string
   firstButtonLabel: string
-  secondButtonLabel: string
+  secondButtonLabel?: string
+}
+
+interface SupportsProps {
+  label: string
+  openCompany: {
+    title: string
+    description: string
+  }[]
+  button: {
+    1: {
+      label: string
+      linkTo: string
+    }
+    2: {
+      label: string
+      linkTo: string
+    }
+  }
+}
+
+interface WeSimplifyContentProps {
+  title: string
+  description: string
+  link: string
+  imgPath: string
+}
+
+interface CompanyActivitiesProps {
+  activity: string
+}
+
+interface ContentFormFatorRProps {
+  id: string
+  question: string
+}
+
+type AnswerKeys = 'company' | 'salary' | 'employees'
+
+interface RFactorCalculatorProps {
+  grossSales: string
+  activity: string
+  company: string
+  employees: string
+  salary: string
 }

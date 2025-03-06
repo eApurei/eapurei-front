@@ -16,15 +16,22 @@ export default function TheTimeToInvest({
           {title}
           <span className="text-primary-100">{titleDifference}</span>
         </h1>
+
         <div className="flex items-center justify-center gap-4">
           <ButtonComponent linkTo="" label={firstButtonLabel} />
-          <ButtonComponent
-            linkTo=""
-            label={secondButtonLabel}
-            style="bg-secondary-100 border-secondary-100"
-          />
+
+          {secondButtonLabel ? (
+            <ButtonComponent
+              linkTo=""
+              label={secondButtonLabel}
+              style="bg-secondary-100 border-secondary-100"
+            />
+          ) : (
+            <></>
+          )}
         </div>
       </div>
+
       <div className="flex w-[45%] items-center justify-center">
         <Image
           alt="Image Woman eApurei"
