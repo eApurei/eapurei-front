@@ -148,7 +148,10 @@ export function Header() {
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
-                          <Link href={'#'} className="cursor-pointer">
+                          <Link
+                            href={'/conteudos/calculadora-rpa-autonomo'}
+                            className="cursor-pointer"
+                          >
                             Calculadora de RPA Online
                           </Link>
                         </DropdownMenuItem>

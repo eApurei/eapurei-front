@@ -4,7 +4,7 @@ import { roboto } from '@/lib/fonts'
 export default function KeepTrackOfYourAccountingManagement() {
   return (
     <>
-      <main className="relative flex w-full flex-col items-center justify-center gap-4 bg-gray-100 px-4 py-12 dark:bg-grey-100 lg_2:px-2">
+      <main className="relative flex w-full flex-col items-center justify-center gap-4 bg-gray-100 px-4 py-12 dark:bg-white lg_2:px-2">
         <h1 className="text-3xl font-bold text-primary-100">
           Acompanhe a gestão da sua contabilidade em nossa plataforma
         </h1>
