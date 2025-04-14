@@ -8,7 +8,11 @@ interface InputProps {
   htmlForInput: string
 }
 
-export default function Input({ label, idInput, htmlForInput }: InputProps) {
+export default function PriceInput({
+  label,
+  idInput,
+  htmlForInput,
+}: InputProps) {
   const [value, setValue] = useState<string>('')
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -27,17 +31,18 @@ export default function Input({ label, idInput, htmlForInput }: InputProps) {
     <>
       <label
         htmlFor={htmlForInput}
-        className="flex flex-col items-start justify-center gap-2 dark:text-white"
+        className="flex w-full flex-col items-start justify-center gap-2 dark:text-white"
       >
         {label}
 
         <input
           id={idInput}
           type="text"
+          required
           value={value}
           onChange={handleInputChange}
           placeholder="R$ 0,00"
-          className="w-72 rounded-md border border-primary-100 px-2 py-[5px] dark:text-black dark:placeholder:text-slate-500"
+          className="w-full rounded-md border border-primary-100 px-2 py-[5px] dark:text-black dark:placeholder:text-slate-500"
         />
       </label>
     </>

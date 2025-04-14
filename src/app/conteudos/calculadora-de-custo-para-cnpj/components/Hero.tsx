@@ -242,11 +242,13 @@ export default function Hero() {
           className={`flex w-full items-center justify-center py-8 ${roboto.className}`}
         >
           <div className="w-[35%]">oi</div>
+
           <div className="flex w-[35%] flex-col items-center justify-center gap-12">
             <div className="flex w-full flex-col items-start justify-center gap-4">
               <Label htmlFor="cities" className="font-bold dark:text-white">
                 Em qual cidade você pretende abrir sua empresa?
               </Label>
+
               <Select>
                 <SelectTrigger
                   className="w-full bg-white text-gray-500 focus-visible:ring-primary-100 dark:bg-black dark:text-gray-400 dark:focus-visible:ring-primary-100"
@@ -257,6 +259,7 @@ export default function Hero() {
                     className=""
                   />
                 </SelectTrigger>
+
                 <SelectContent position="popper" className="max-w-full">
                   {cities.map((item, index) => (
                     <SelectItem
@@ -275,6 +278,7 @@ export default function Hero() {
               <Label htmlFor="activity" className="font-bold dark:text-white">
                 Qual atividade você exerce ou exercerá?
               </Label>
+
               <Select>
                 <SelectTrigger
                   className="w-full bg-white text-gray-500 focus-visible:ring-primary-100 dark:bg-black dark:text-gray-400 dark:focus-visible:ring-primary-100"
@@ -282,7 +286,8 @@ export default function Hero() {
                 >
                   <SelectValue placeholder="Selecione uma atividade" />
                 </SelectTrigger>
-                <SelectContent position="popper" className="max-w-full">
+
+                <SelectContent position="popper" className="max-w-full p-2">
                   {activities.map((activity, index) => (
                     <SelectItem
                       key={index}
@@ -298,6 +303,7 @@ export default function Hero() {
 
             <div className="flex w-full flex-col items-start justify-center gap-4">
               <Tooltip id="billing" style={{ width: '20%' }} />
+
               <Label
                 htmlFor="billing"
                 className="flex w-full items-center justify-between font-bold dark:text-white"
@@ -312,6 +318,7 @@ export default function Hero() {
                   className="cursor-pointer text-grey-200 duration-300 hover:scale-110 lg_2:w-5"
                 />
               </Label>
+
               <Input
                 type="text"
                 id="billing"

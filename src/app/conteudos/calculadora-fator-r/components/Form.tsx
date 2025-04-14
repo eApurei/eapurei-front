@@ -258,7 +258,7 @@ export default function Form() {
         </section>
       ))}
 
-      <p>
+      <p className="text-zinc-500 dark:text-zinc-300">
         Ao clicar em Calcular Fator R, você está ciente e concorda com a nossa{' '}
         <Link className="text-primary-100 underline" href={'/#'}>
           Política de Privacidade
@@ -274,6 +274,7 @@ export default function Form() {
         <Link className="text-primary-100 underline" href={'/#'}>
           Temos de Uso
         </Link>
+        .
       </p>
 
       <input

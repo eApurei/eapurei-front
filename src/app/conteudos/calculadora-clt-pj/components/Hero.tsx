@@ -65,29 +65,20 @@ export default function Hero() {
         </div>
 
         <p className="w-1/2 text-center text-zinc-500 dark:text-zinc-300">
-          Ao clicar em Ver resultado, você está ciente e concorda com a nossa{' '}
-          <Link
-            href={'#'}
-            className="underline duration-300 hover:opacity-70"
-            target="_blank"
-          >
+          Ao clicar em Calcular Fator R, você está ciente e concorda com a nossa{' '}
+          <Link className="text-primary-100 underline" href={'/#'}>
             Política de Privacidade
           </Link>
           ,{' '}
           <Link
+            className="text-primary-100 underline"
             href={'/politicas-de-cookies'}
-            className="underline duration-300 hover:opacity-70"
-            target="_blank"
           >
             Política de Cookies
           </Link>{' '}
           e nossos{' '}
-          <Link
-            href={'#'}
-            className="underline duration-300 hover:opacity-70"
-            target="_blank"
-          >
-            Termos de Uso
+          <Link className="text-primary-100 underline" href={'/#'}>
+            Temos de Uso
           </Link>
           .
         </p>
