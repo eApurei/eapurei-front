@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  CaretDown,
   FacebookLogo,
   InstagramLogo,
   LinkedinLogo,
@@ -10,6 +11,14 @@ import Link from 'next/link'
 
 import { IMenuItemsProps } from '@/@types'
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu'
 import { Separator } from './ui/separator'
 
 const menuItems: IMenuItemsProps[] = [
@@ -109,14 +118,63 @@ export default function Footer() {
             className="h-32 bg-primary-100 opacity-60 dark:bg-white"
           />
 
-          <nav className="flex items-center justify-center">
-            <ul className="flex items-center justify-center gap-4 text-base font-bold text-primary-100 lg_1:text-sm lg_2:gap-2 lg_2:text-xs">
+          <nav className="flex items-center justify-center md_1:hidden">
+            <ul className="flex items-center justify-center gap-4 text-sm font-bold text-primary-100 lg_2:gap-2 lg_2:text-xs">
               {menuItems.map((item, index) => {
                 return (
                   <Link href={item.href} key={index}>
-                    <li className="cursor-pointer border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
-                      {item.label}
-                    </li>
+                    {item.label === 'Conteúdos' ? (
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <li className="flex cursor-pointer items-center justify-center gap-1 border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
+                            {item.label}
+                            <CaretDown size={14} weight="bold" />
+                          </li>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="font-semibold text-dark-100">
+                          <DropdownMenuLabel className="text-base text-primary-100">
+                            Calculadoras:
+                          </DropdownMenuLabel>
+                          <DropdownMenuSeparator />
+                          <DropdownMenuItem asChild>
+                            <Link
+                              href={'/conteudos/calculadora-de-custo-para-cnpj'}
+                              className="cursor-pointer"
+                            >
+                              Calculadora de Custo para abrir CNPJ
+                            </Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <Link
+                              href={'/conteudos/calculadora-clt-pj'}
+                              className="cursor-pointer"
+                            >
+                              Calculadora PJ x CLT
+                            </Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <Link
+                              href={'/conteudos/calculadora-fator-r'}
+                              className="cursor-pointer"
+                            >
+                              Calculadora de Fator R
+                            </Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <Link
+                              href={'/conteudos/calculadora-rpa-autonomo'}
+                              className="cursor-pointer"
+                            >
+                              Calculadora de RPA Online
+                            </Link>
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    ) : (
+                      <li className="cursor-pointer border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
+                        {item.label}
+                      </li>
+                    )}
                   </Link>
                 )
               })}

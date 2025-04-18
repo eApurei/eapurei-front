@@ -41,6 +41,11 @@ export interface AccordionItemsProps {
   value: string
 }
 
+export interface AccordionItemsFAQProps {
+  label: string
+  value: string[]
+}
+
 export interface HowMuchWouldYouPayProps {
   label: string
   price: string
