@@ -115,3 +115,26 @@ interface RFactorCalculatorProps {
   employees: string
   salary: string
 }
+
+export interface StepsSwitchingAccountantsIsEasyProps {
+  number: number
+  text: string
+}
+
+export interface HighlightsProps {
+  icon: JSX.Element
+  title: string
+  description: string
+}
+
+export interface TestimonialsProps {
+  id: number
+  name: string
+  role: string
+  testimonial: string
+  avatar: string
+}
+
+export interface TestimonialCardProps {
+  testimonial: TestimonialsProps
+}

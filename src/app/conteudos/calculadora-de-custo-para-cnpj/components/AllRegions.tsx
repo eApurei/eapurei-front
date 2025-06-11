@@ -3,7 +3,7 @@ import { roboto } from '@/lib/fonts'
 export default function AllRegions() {
   return (
     <section
-      className={`${roboto.className} flex w-full flex-col items-center justify-center gap-4 p-12 dark:bg-grey-100 lg_2:px-2`}
+      className={`${roboto.className} flex w-full flex-col items-center justify-center gap-4 bg-gray-100 p-12 dark:bg-grey-100 lg_2:px-2`}
     >
       <h1 className="text-3xl font-bold text-primary-100">
         Já estamos em todas as regiões

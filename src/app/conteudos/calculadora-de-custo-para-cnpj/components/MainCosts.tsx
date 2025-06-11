@@ -4,7 +4,7 @@ import { roboto } from '@/lib/fonts'
 export default function MainCosts() {
   return (
     <section
-      className={`${roboto.className} flex w-full items-center justify-center gap-4 px-12 pt-20 dark:bg-grey-100 lg_2:px-2`}
+      className={`${roboto.className} flex w-full items-center justify-center gap-4 bg-gray-100 px-12 py-20 dark:bg-grey-100 lg_2:px-2`}
     >
       <div className="flex w-1/2 flex-col items-start justify-center gap-4">
         <h1 className="text-3xl font-bold text-primary-100">

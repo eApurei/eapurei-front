@@ -137,7 +137,17 @@ export default function PlansSelect() {
   const handleTabClick = (tab: string) => setActiveTab(tab)
 
   return (
-    <div className="flex w-full items-start justify-center gap-16 pb-20 dark:bg-grey-100">
+    <div className="flex w-full flex-col items-center justify-center gap-16 py-20 dark:bg-grey-100">
+      <div className="flex w-full flex-col items-center justify-center gap-4 px-4">
+        <h1 className="text-3xl font-bold uppercase text-primary-100">
+          Confira o quanto você economiza com a eApurei
+        </h1>
+        <span className="font-medium dark:text-white">
+          Preencha as informações ao lado para descobrir o seu plano ideal e
+          ainda conferir o quanto você economizará.
+        </span>
+      </div>
+
       <Card
         className={`w-[468px] ${roboto.className} rounded-md border-secondary-50 bg-secondary-50 dark:border-dark-100 dark:bg-dark-100`}
       >

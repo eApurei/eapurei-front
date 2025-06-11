@@ -3,7 +3,7 @@
 import { CaretDown, HandCoins, Moon, Sun, Users } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 import { IMenuItemsProps } from '@/@types'
 
@@ -37,6 +37,82 @@ const menuItems: IMenuItemsProps[] = [
   {
     label: 'Como funciona',
     href: '/como-funciona',
+  },
+]
+
+const dropDownContentItems: IMenuItemsProps[] = [
+  {
+    label: 'Calculadora de Custo para abrir CNPJ',
+    href: '/conteudos/calculadora-de-custo-para-cnpj',
+  },
+  {
+    label: 'Calculadora PJ x CLT',
+    href: '/conteudos/calculadora-clt-pj',
+  },
+  {
+    label: 'Calculadora de Fator R',
+    href: '/conteudos/calculadora-fator-r',
+  },
+  {
+    label: 'Calculadora de RPA Online',
+    href: '/conteudos/calculadora-rpa-autonomo',
+  },
+]
+
+const dropDownServicesItems: IMenuItemsProps[] = [
+  {
+    label: 'Abrir empresa grátis',
+    href: '/servicos/abrir-empresa-gratis',
+  },
+  {
+    label: 'Deixar de ser MEI',
+    href: '/#',
+  },
+  {
+    label: 'Trocar de contador',
+    href: '/#',
+  },
+  {
+    label: 'Contabilidade completa',
+    href: '/servicos/escritorio-contabilidade-online',
+  },
+]
+
+const dropDownServicesForCompanyItems: IMenuItemsProps[] = [
+  {
+    label: 'Escritório Virtual',
+    href: '/#',
+  },
+  {
+    label: 'Emissor de Nota Fiscal',
+    href: '/#',
+  },
+  {
+    label: 'Certificado Digital',
+    href: '/#',
+  },
+  {
+    label: 'Banco PJ',
+    href: '/#',
+  },
+  {
+    label: 'Cobrança de Clientes',
+    href: '/#',
+  },
+]
+
+const dropDownServicesForYouItems: IMenuItemsProps[] = [
+  {
+    label: 'Plano de Saúde',
+    href: '/#',
+  },
+  {
+    label: 'Academias',
+    href: '/#',
+  },
+  {
+    label: 'Serviço de Psicologia e Nutrição',
+    href: '/#',
   },
 ]
 
@@ -107,87 +183,148 @@ export function Header() {
 
         <nav className="flex items-center justify-center md_1:hidden">
           <ul className="flex items-center justify-center gap-4 text-sm font-bold text-primary-100 lg_2:gap-2 lg_2:text-xs">
-            {menuItems.map((item, index) => {
+            {menuItems.map((itemMenu, index) => {
               return (
-                <Link href={item.href} key={index}>
-                  {item.label === 'Conteúdos' ? (
+                <Fragment key={index}>
+                  {itemMenu.href === '/conteudos' ? (
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <li className="flex cursor-pointer items-center justify-center gap-1 border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
-                          {item.label}
+                          {itemMenu.label}
                           <CaretDown size={14} weight="bold" />
                         </li>
                       </DropdownMenuTrigger>
+
                       <DropdownMenuContent className="font-semibold text-dark-100">
-                        <DropdownMenuLabel className="text-base text-primary-100">
+                        <DropdownMenuLabel className="select-none text-primary-100">
                           Calculadoras:
                         </DropdownMenuLabel>
+
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href={'/conteudos/calculadora-de-custo-para-cnpj'}
-                            className="cursor-pointer"
-                          >
-                            Calculadora de Custo para abrir CNPJ
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href={'/conteudos/calculadora-clt-pj'}
-                            className="cursor-pointer"
-                          >
-                            Calculadora PJ x CLT
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href={'/conteudos/calculadora-fator-r'}
-                            className="cursor-pointer"
-                          >
-                            Calculadora de Fator R
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href={'/conteudos/calculadora-rpa-autonomo'}
-                            className="cursor-pointer"
-                          >
-                            Calculadora de RPA Online
-                          </Link>
-                        </DropdownMenuItem>
+
+                        {dropDownContentItems.map((item, index) => (
+                          <DropdownMenuItem asChild key={index}>
+                            <Link href={item.href} className="cursor-pointer">
+                              {item.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  ) : itemMenu.href === '/servicos' ? (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <li className="flex cursor-pointer items-center justify-center gap-1 border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
+                          {itemMenu.label}
+                          <CaretDown size={14} weight="bold" />
+                        </li>
+                      </DropdownMenuTrigger>
+
+                      <DropdownMenuContent className="flex font-semibold text-dark-100">
+                        <div className="flex flex-col">
+                          <DropdownMenuLabel className="text-primary-100">
+                            Serviço de Contabilidade:
+                          </DropdownMenuLabel>
+
+                          <DropdownMenuSeparator />
+
+                          {dropDownServicesItems.map((item, index) => (
+                            <DropdownMenuItem asChild key={index}>
+                              <Link href={item.href} className="cursor-pointer">
+                                {item.label}
+                              </Link>
+                            </DropdownMenuItem>
+                          ))}
+                        </div>
+
+                        <Separator
+                          orientation="vertical"
+                          className="h-[12.5] bg-gray-100"
+                        />
+
+                        <div className="flex flex-col">
+                          <DropdownMenuLabel className="text-primary-100">
+                            Para sua empresa:
+                          </DropdownMenuLabel>
+
+                          <DropdownMenuSeparator />
+
+                          {dropDownServicesForCompanyItems.map(
+                            (item, index) => (
+                              <DropdownMenuItem asChild key={index}>
+                                <Link
+                                  href={item.href}
+                                  className="cursor-pointer"
+                                >
+                                  {item.label}
+                                </Link>
+                              </DropdownMenuItem>
+                            ),
+                          )}
+                        </div>
+
+                        <Separator
+                          orientation="vertical"
+                          className="h-[12.5] bg-gray-100"
+                        />
+
+                        <div className="flex flex-col">
+                          <DropdownMenuLabel className="text-primary-100">
+                            Para você:
+                          </DropdownMenuLabel>
+
+                          <DropdownMenuSeparator />
+
+                          {dropDownServicesForYouItems.map((item, index) => (
+                            <DropdownMenuItem asChild key={index}>
+                              <Link href={item.href} className="cursor-pointer">
+                                {item.label}
+                              </Link>
+                            </DropdownMenuItem>
+                          ))}
+                        </div>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   ) : (
-                    <li className="cursor-pointer border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80">
-                      {item.label}
-                    </li>
+                    <Link
+                      href={itemMenu.href}
+                      className="cursor-pointer border-b border-t border-transparent p-1 duration-300 hover:rounded-md hover:border-b-primary-100 hover:opacity-80"
+                    >
+                      {itemMenu.label}
+                    </Link>
                   )}
-                </Link>
+                </Fragment>
               )
             })}
           </ul>
         </nav>
 
         <div className="flex items-center justify-center gap-3 lg_1:gap-2 md_1:gap-4">
-          <Link
-            href={'#'}
-            className="flex items-center gap-2 rounded-[3px] bg-gray-500 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1 md_1:hidden"
-          >
-            <Users size={20} weight="fill" className="text-white lg_1:w-4" />
-            Área do Cliente
-          </Link>
+          {Array.from(['Área do cliente', 'Abrir empresa']).map(
+            (item, index) => (
+              <Link
+                href={'#'}
+                key={index}
+                className={`flex items-center gap-2 rounded-[3px] ${item === 'Área do cliente' ? 'bg-gray-500' : 'bg-primary-100'} px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1 md_1:hidden`}
+              >
+                {item === 'Área do cliente' ? (
+                  <Users
+                    size={20}
+                    weight="fill"
+                    className="text-white lg_1:w-4"
+                  />
+                ) : (
+                  <HandCoins
+                    size={20}
+                    weight="fill"
+                    className="text-white lg_1:w-4"
+                  />
+                )}
 
-          <Link
-            href={'#'}
-            className="flex items-center gap-2 rounded-[3px] bg-primary-100 px-3 py-2 text-sm font-bold text-white duration-300 hover:opacity-80 lg_1:text-xs lg_2:px-2 lg_2:py-1 md_1:hidden"
-          >
-            <HandCoins
-              size={20}
-              weight="fill"
-              className="text-white lg_1:w-4"
-            />
-            Abrir empresa
-          </Link>
+                {item}
+              </Link>
+            ),
+          )}
 
           <button type="button" onClick={toggleDarkMode}>
             {isDarkMode ? (

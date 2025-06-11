@@ -38,7 +38,7 @@ const accordionItems: AccordionItemsFAQProps[] = [
 
 export default function FAQ() {
   return (
-    <main className="flex flex-col items-center justify-center gap-6 px-8 py-20 dark:bg-grey-100">
+    <main className="flex flex-col items-center justify-center gap-6 bg-gray-100 px-8 py-20 dark:bg-grey-100">
       <h1 className="w-1/2 text-center text-4xl font-bold text-grey-100 dark:text-white">
         Considerações importantes sobre a Calculadora do Autônomo
       </h1>
@@ -63,12 +63,16 @@ export default function FAQ() {
           })}
         </Accordion>
 
-        {Array.from([
-          '* A calculadora de RPA é indicada somente para consulta, e a eApurei não é responsável pelo uso das informações.',
-          'O cálculo do CPP foi simulado com base em uma empresa contratante que pertence ao Lucro Presumido. Os cálculos do PJ simulam uma empresa contratada que pertence ao Simples Nacional, Anexo 3. Para esclarecimentos, converse com um contador da sua confiança.',
-        ]).map((content, i) => (
-          <p key={i}>{content}</p>
-        ))}
+        <div className="flex w-full flex-col items-start justify-center gap-4">
+          {Array.from([
+            '* A calculadora de RPA é indicada somente para consulta, e a eApurei não é responsável pelo uso das informações.',
+            'O cálculo do CPP foi simulado com base em uma empresa contratante que pertence ao Lucro Presumido. Os cálculos do PJ simulam uma empresa contratada que pertence ao Simples Nacional, Anexo 3. Para esclarecimentos, converse com um contador da sua confiança.',
+          ]).map((content, i) => (
+            <p className="w-full" key={i}>
+              {content}
+            </p>
+          ))}
+        </div>
       </div>
     </main>
   )

@@ -4,7 +4,7 @@ import { roboto } from '@/lib/fonts'
 
 export default function OpenYourCompany() {
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-4 px-8 py-16 dark:bg-grey-100 lg_2:px-2">
+    <section className="flex w-full flex-col items-center justify-center gap-4 bg-gray-100 px-8 py-16 dark:bg-grey-100 lg_2:px-2">
       <h1 className="text-3xl font-bold text-primary-100">
         Abra sua empresa com a <span className="text-secondary-150">e</span>
         Apurei

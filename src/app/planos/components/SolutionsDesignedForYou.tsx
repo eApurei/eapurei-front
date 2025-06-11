@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 export default function SolutionsDesignedForYou() {
   return (
-    <main className="flex w-full flex-col items-center justify-center gap-8 px-8 py-28 dark:bg-grey-100">
+    <main className="flex w-full flex-col items-center justify-center gap-8 bg-gray-100 px-8 py-20 dark:bg-grey-100">
       <h1 className="text-4xl font-bold text-grey-100 dark:text-white lg_1:text-3xl">
         Soluções pensadas em você e na sua empresa
       </h1>
