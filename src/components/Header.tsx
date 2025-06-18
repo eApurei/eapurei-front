@@ -89,7 +89,7 @@ const dropDownServicesForCompanyItems: IMenuItemsProps[] = [
   },
   {
     label: 'Certificado Digital',
-    href: '/#',
+    href: '/servicos/certificado-digital',
   },
   {
     label: 'Banco PJ',
