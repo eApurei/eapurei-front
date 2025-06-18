@@ -168,7 +168,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`flex items-center justify-between bg-white px-8 py-3 dark:bg-dark-100 lg_2:px-2 ${isSticky ? 'fixed left-0 right-0 top-0 z-50 shadow-md' : ''}`}
+        className={`z-[60] flex items-center justify-between bg-white px-8 py-3 dark:bg-dark-100 lg_2:px-2 ${isSticky ? 'fixed left-0 right-0 top-0 z-50 shadow-md' : ''}`}
       >
         <Link href={'/'} className="duration-300 hover:opacity-80">
           <Image
@@ -182,7 +182,7 @@ export function Header() {
         </Link>
 
         <nav className="flex items-center justify-center md_1:hidden">
-          <ul className="flex items-center justify-center gap-4 text-sm font-bold text-primary-100 lg_2:gap-2 lg_2:text-xs">
+          <ul className="z-[70] flex items-center justify-center gap-4 text-sm font-bold text-primary-100 lg_2:gap-2 lg_2:text-xs">
             {menuItems.map((itemMenu, index) => {
               return (
                 <Fragment key={index}>
@@ -195,7 +195,7 @@ export function Header() {
                         </li>
                       </DropdownMenuTrigger>
 
-                      <DropdownMenuContent className="font-semibold text-dark-100">
+                      <DropdownMenuContent className="z-[70] font-semibold text-dark-100">
                         <DropdownMenuLabel className="select-none text-primary-100">
                           Calculadoras:
                         </DropdownMenuLabel>
@@ -220,7 +220,7 @@ export function Header() {
                         </li>
                       </DropdownMenuTrigger>
 
-                      <DropdownMenuContent className="flex font-semibold text-dark-100">
+                      <DropdownMenuContent className="z-[70] flex font-semibold text-dark-100">
                         <div className="flex flex-col">
                           <DropdownMenuLabel className="text-primary-100">
                             Serviço de Contabilidade:

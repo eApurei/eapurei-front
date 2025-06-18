@@ -18,6 +18,7 @@ const config: Config = {
         'secondary-150': '#7c6993',
         'secondary-900': '#9e8f2b',
         'tertiary-100': '#f0f0f0f0',
+        'tertiary-50': '#fff',
         'dark-100': '#383838',
         'dark-200': '#b4e1e7',
         'dark-300': '#a6a6a6',

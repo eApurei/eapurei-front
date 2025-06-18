@@ -138,3 +138,18 @@ export interface TestimonialsProps {
 export interface TestimonialCardProps {
   testimonial: TestimonialsProps
 }
+
+export interface ComparisonDataProps {
+  service: string
+  eapurei: string
+  market: string
+  isZero?: boolean
+  isSpecial?: boolean
+}
+
+export interface BenefitsCompanyPageProps {
+  title: string
+  description: string
+  avatarPartner: string
+  img: string
+}

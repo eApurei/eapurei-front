@@ -1,4 +1,5 @@
 import { TestimonialsProps } from '@/@types'
+import ButtonComponent from '@/components/ButtonComponent'
 import { roboto } from '@/lib/fonts'
 
 import TestimonialCard from './TestimonialCard'
@@ -88,6 +89,12 @@ export default function ClientsSayAboutUs() {
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray-50 to-transparent dark:from-grey-100"></div>
         </div>
       </div>
+
+      <ButtonComponent
+        label="fale com um especialista"
+        linkTo="/#"
+        style="mt-8"
+      />
     </div>
   )
 }
