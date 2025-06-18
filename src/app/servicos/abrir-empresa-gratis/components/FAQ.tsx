@@ -9,12 +9,12 @@ import { roboto } from '@/lib/fonts'
 
 const accordionItems: AccordionItemsProps[] = [
   {
-    label: 'A Contabilizei é confiável?',
+    label: 'A eApurei é confiável?',
     value:
       'Sim. Há mais de 10 anos nós unimos tecnologia de ponta à nossa experiência contábil para simplificar a vida de quem empreende no Brasil. Temos o maior time de contadores certificados do Brasil e contamos com mais de mil especialistas prontos para cuidar da sua contabilidade.',
   },
   {
-    label: 'A Contabilizei tem contadores de verdade?',
+    label: 'A eApurei tem contadores de verdade?',
     value:
       'Sim, somos o maior escritório de contabilidade do Brasil e temos um time com mais de 80 contadores registrados no Conselho Regional de Contabilidade (CRC) trabalhando com a gente. Eles são responsáveis por acompanhar e garantir toda a rotina contábil da sua empresa para que ela esteja sempre em dia com as obrigações do governo. Além disso, toda essa rotina é auditada anualmente pelo Conselho Regional de Contabilidade (CRC).',
   },
@@ -44,9 +44,9 @@ const accordionItems: AccordionItemsProps[] = [
       'Todas as atividades e rotinas contábeis, fiscais e de folha de pagamento exigidas por lei estão inclusas na mensalidade, além de todo o suporte online através dos nossos canais de atendimento e acesso ilimitado a nossa plataforma digital, com todos os dados de sua empresa.',
   },
   {
-    label: 'Quais tipos de CNAEs a Contabilizei trabalha?',
+    label: 'Quais tipos de CNAEs a eApurei trabalha?',
     value:
-      'A Contabilizei abre empresas com CNAEs de atividades de serviços e comércios varejistas. A definição do CNAE (Classificação Nacional de Atividades Econômicas-Fiscal) é uma etapa muito importante, e obrigatória, para a abertura de um CNPJ. O tipo de CNAE interfere até mesmo na alíquota de imposto que incidirá. Nós disponibilizamos uma ferramenta online onde é possível consultar todos os CNAES, quais são as atividades que podem ser exercidas e quais não podem, se são atendidas ela Contabilizei, além de informar se são atividades permitidas no Simples Nacional, no MEI e qual a alíquota de imposto incidente em cada uma.',
+      'A eApurei abre empresas com CNAEs de atividades de serviços e comércios varejistas. A definição do CNAE (Classificação Nacional de Atividades Econômicas-Fiscal) é uma etapa muito importante, e obrigatória, para a abertura de um CNPJ. O tipo de CNAE interfere até mesmo na alíquota de imposto que incidirá. Nós disponibilizamos uma ferramenta online onde é possível consultar todos os CNAES, quais são as atividades que podem ser exercidas e quais não podem, se são atendidas ela eApurei, além de informar se são atividades permitidas no Simples Nacional, no MEI e qual a alíquota de imposto incidente em cada uma.',
   },
   {
     label: 'O que é certificado digital e qual sua obrigatoriedade?',
@@ -59,10 +59,9 @@ const accordionItems: AccordionItemsProps[] = [
       'Sim, é possível. Nossa corretora fará a cotação dos planos individuais que podem te atender, de acordo com a sua região.',
   },
   {
-    label:
-      'Preciso ser cliente da Contabilizei para contratar um plano de saúde?',
+    label: 'Preciso ser cliente da eApurei para contratar um plano de saúde?',
     value:
-      'Sim. Para contratar qualquer plano de saúde por meio da Contabilizei é necessário ser cliente.',
+      'Sim. Para contratar qualquer plano de saúde por meio da eApurei é necessário ser cliente.',
   },
 ]
 

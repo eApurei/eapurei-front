@@ -45,7 +45,7 @@ export default function LearnAboutSomeOfTheBenefits() {
         {benefits.map((content, index) => (
           <div
             key={index}
-            className="bg-tertiary-50 w-[360px] rounded-lg border border-grey-950 p-8 text-center shadow-sm"
+            className="w-[360px] rounded-lg border border-grey-950 bg-tertiary-50 p-8 text-center shadow-sm"
           >
             <div className="mb-8">
               <h2 className="mb-4 text-2xl font-bold text-primary-100">
