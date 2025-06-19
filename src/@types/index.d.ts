@@ -153,3 +153,12 @@ export interface BenefitsCompanyPageProps {
   avatarPartner: string
   img: string
 }
+
+export interface NoMembershipFeeAndNoMonthlyFeesContentProps {
+  title: string
+  firstSubtitle: string
+  firstDescription: string
+  secondSubtitle: string
+  secondDescription: string
+  img?: string
+}

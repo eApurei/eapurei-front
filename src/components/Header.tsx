@@ -97,7 +97,7 @@ const dropDownServicesForCompanyItems: IMenuItemsProps[] = [
   },
   {
     label: 'Cobrança de Clientes',
-    href: '/#',
+    href: '/servicos/cobre-seu-cliente',
   },
 ]
 
